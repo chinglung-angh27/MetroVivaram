@@ -1,0 +1,16 @@
+streamlit
+streamlit-authenticator
+pytesseract
+pdf2image
+langdetect
+fuzzywuzzy
+python-levenshtein
+PyPDF2
+transformers
+plotly
+pandas
+numpy
+Pillow
+accelerate
+python-docx
+# opencv-python excluded for cloud compatibility

@@ -12,5 +12,4 @@ pandas
 numpy
 Pillow
 accelerate
-opencv-python
 python-docx

@@ -10,10 +10,17 @@ import io
 import streamlit as st
 from langdetect import detect, LangDetectException
 import logging
-import cv2
-import numpy as np
 import re
 from typing import Dict, List, Tuple, Optional
+
+# Optional OpenCV import for enhanced image preprocessing
+try:
+    import cv2
+    import numpy as np
+    CV2_AVAILABLE = True
+except ImportError:
+    CV2_AVAILABLE = False
+    # Warning will be shown in the UI when preprocessing is first used
 
 class AdvancedOCRProcessor:
     def __init__(self):
@@ -24,6 +31,10 @@ class AdvancedOCRProcessor:
             'hybrid': 'eng+mal'
         }
         self.logger = logging.getLogger(__name__)
+        
+        # Show OpenCV status on first initialization
+        if not CV2_AVAILABLE:
+            self.logger.info("OpenCV not available - using PIL-based image preprocessing")
         
     def detect_content_language(self, text: str) -> Dict[str, any]:
         """
@@ -94,27 +105,56 @@ class AdvancedOCRProcessor:
     def preprocess_image(self, image: Image.Image) -> Image.Image:
         """
         Preprocess image for better OCR accuracy
+        Uses OpenCV for advanced processing when available, falls back to PIL
         """
         # Convert to RGB if necessary
         if image.mode != 'RGB':
             image = image.convert('RGB')
         
-        # Convert PIL image to OpenCV format
-        cv_image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+        if CV2_AVAILABLE:
+            # Advanced preprocessing with OpenCV
+            try:
+                # Convert PIL image to OpenCV format
+                cv_image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+                
+                # Convert to grayscale
+                gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+                
+                # Apply denoising
+                denoised = cv2.fastNlMeansDenoising(gray)
+                
+                # Apply adaptive thresholding
+                thresh = cv2.adaptiveThreshold(
+                    denoised, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
+                )
+                
+                # Convert back to PIL Image
+                processed_image = Image.fromarray(thresh)
+                
+            except Exception as e:
+                self.logger.warning(f"OpenCV preprocessing failed, using PIL fallback: {e}")
+                processed_image = self._preprocess_with_pil(image)
+        else:
+            # Fallback to PIL-based preprocessing
+            processed_image = self._preprocess_with_pil(image)
         
+        return processed_image
+    
+    def _preprocess_with_pil(self, image: Image.Image) -> Image.Image:
+        """
+        Fallback image preprocessing using only PIL
+        """
         # Convert to grayscale
-        gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+        gray_image = image.convert('L')
         
-        # Apply denoising
-        denoised = cv2.fastNlMeansDenoising(gray)
+        # Enhance contrast
+        enhancer = ImageEnhance.Contrast(gray_image)
+        enhanced = enhancer.enhance(2.0)
         
-        # Apply adaptive thresholding
-        thresh = cv2.adaptiveThreshold(
-            denoised, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
-        )
+        # Apply sharpening filter
+        sharpened = enhanced.filter(ImageFilter.SHARPEN)
         
-        # Convert back to PIL Image
-        processed_image = Image.fromarray(thresh)
+        return sharpened
         
         # Enhance contrast
         enhancer = ImageEnhance.Contrast(processed_image)
