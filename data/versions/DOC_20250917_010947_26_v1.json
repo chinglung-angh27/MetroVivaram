@@ -1,0 +1,57 @@
+{
+  "id": "DOC_20250917_010947_26",
+  "filename": "WhatsApp Image 2025-09-17 at 01.07.34.jpeg",
+  "file_type": "image/jpeg",
+  "upload_date": "2025-09-17T01:09:47.895547",
+  "uploaded_by": "Suresh Menon",
+  "uploader_role": "HR",
+  "document_type": "Unknown",
+  "classification_confidence": 0,
+  "summary": "• Feet                r Q efor                i gLFE progressivelyeELFEES                PtF[REDACTED",
+  "action_items": [],
+  "deadlines": [],
+  "risks": [],
+  "priority": "Medium",
+  "language": "unknown",
+  "text_stats": {
+    "words": 11,
+    "characters": 42,
+    "lines": 8,
+    "sentences": 1
+  },
+  "key_information": {},
+  "file_path": "/Users/ching/Desktop/KochiMetro_DocuTrack/uploads/WhatsApp Image 2025-09-17 at 01.07.34.jpeg",
+  "tags": [],
+  "status": "Active",
+  "version": 1,
+  "permissions": {
+    "view": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "edit": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "approve": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "delete": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "DOC_20250917_011235_27",
+  "filename": "Screenshot 2025-09-17 at 1.12.13 AM.png",
+  "file_type": "image/png",
+  "upload_date": "2025-09-17T01:12:35.248414",
+  "uploaded_by": "Suresh Menon",
+  "uploader_role": "HR",
+  "document_type": "Unknown",
+  "classification_confidence": 0,
+  "summary": "• Chingag dhelendiay: \"I'm not going to give up my life, I'm not",
+  "action_items": [],
+  "deadlines": [],
+  "risks": [],
+  "priority": "Medium",
+  "language": "unknown",
+  "text_stats": {
+    "words": 2,
+    "characters": 19,
+    "lines": 2,
+    "sentences": 1
+  },
+  "key_information": {},
+  "file_path": "/Users/ching/Desktop/KochiMetro_DocuTrack/uploads/Screenshot 2025-09-17 at 1.12.13 AM.png",
+  "tags": [],
+  "status": "Active",
+  "version": 1,
+  "permissions": {
+    "view": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "edit": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "approve": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "delete": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ]
+  }
+}

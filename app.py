@@ -11,7 +11,7 @@ from pages import dashboard, upload
 import plotly.express as px
 
 # App branding
-LOGO_PATH = "uploads/carhire.pdf"  # Replace with your logo path or image
+# LOGO_PATH = "uploads/logo.png"  # Add your logo path here if needed
 APP_NAME = "MetroVivaram"
 
 # Material U CSS styles
