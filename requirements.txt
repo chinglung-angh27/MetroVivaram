@@ -1,0 +1,13 @@
+streamlit
+streamlit-authenticator
+pytesseract
+langdetect
+fuzzywuzzy
+python-levenshtein
+PyPDF2
+transformers
+plotly
+pandas
+numpy
+Pillow
+accelerate

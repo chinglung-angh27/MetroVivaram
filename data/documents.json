@@ -1,0 +1,1069 @@
+[
+  {
+    "id": "DOC_20241201_001",
+    "filename": "Safety_Circular_Fire_Drill_Dec2024.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-10T04:25:58.797796",
+    "uploaded_by": "Safety Officer",
+    "uploader_role": "HR",
+    "document_type": "Safety Notice",
+    "classification_confidence": 95,
+    "summary": "Mandatory fire drill scheduled for December 15, 2024. All depot staff must participate. Emergency evacuation procedures updated.",
+    "action_items": [
+      "Attend fire drill on December 15, 2024",
+      "Review updated evacuation procedures",
+      "Report to designated assembly points"
+    ],
+    "deadlines": [
+      "December 15, 2024"
+    ],
+    "risks": [
+      "Fire safety compliance required",
+      "Emergency preparedness critical"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 245,
+      "characters": 1456,
+      "lines": 18
+    },
+    "key_information": {
+      "date": "December 15, 2024",
+      "urgency": "mandatory"
+    },
+    "file_path": "uploads/Safety_Circular_Fire_Drill_Dec2024.pdf",
+    "tags": [
+      "safety",
+      "fire",
+      "drill",
+      "mandatory"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241201_002",
+    "filename": "Invoice_Electrical_Maintenance_Nov2024.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-07T04:25:58.797820",
+    "uploaded_by": "Procurement Team",
+    "uploader_role": "Finance",
+    "document_type": "Invoice",
+    "classification_confidence": 88,
+    "summary": "Electrical maintenance invoice from ABC Electricals for November 2024 work. Total amount ₹2,45,000 including GST.",
+    "action_items": [
+      "Process payment within 30 days",
+      "Verify work completion certificate",
+      "Update maintenance records"
+    ],
+    "deadlines": [
+      "December 30, 2024"
+    ],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 156,
+      "characters": 892,
+      "lines": 12
+    },
+    "key_information": {
+      "invoice_number": "INV-2024-1156",
+      "amount": "245000"
+    },
+    "file_path": "uploads/Invoice_Electrical_Maintenance_Nov2024.pdf",
+    "tags": [
+      "invoice",
+      "electrical",
+      "maintenance",
+      "payment"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241201_003",
+    "filename": "Job_Card_Platform_Repair_Station_A.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-11T04:25:58.797826",
+    "uploaded_by": "Maintenance Supervisor",
+    "uploader_role": "Engineer",
+    "document_type": "Job Card",
+    "classification_confidence": 92,
+    "summary": "Platform repair work at Station A. Concrete crack repair and repainting required. Estimated completion 3 days.",
+    "action_items": [
+      "Schedule repair crew for Station A",
+      "Arrange materials for concrete repair",
+      "Coordinate with station operations for work timing"
+    ],
+    "deadlines": [
+      "December 10, 2024"
+    ],
+    "risks": [
+      "Platform safety during repair work"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 189,
+      "characters": 1123,
+      "lines": 15
+    },
+    "key_information": {
+      "job_number": "JC-2024-0892"
+    },
+    "file_path": "uploads/Job_Card_Platform_Repair_Station_A.pdf",
+    "tags": [
+      "job card",
+      "platform",
+      "repair",
+      "station"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241201_004",
+    "filename": "HR_Policy_Leave_Management_2024.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-05T04:25:58.797832",
+    "uploaded_by": "HR Manager",
+    "uploader_role": "HR",
+    "document_type": "HR Policy",
+    "classification_confidence": 96,
+    "summary": "Updated leave management policy for 2024. New provisions for work-from-home and compensatory leave included.",
+    "action_items": [
+      "Communicate policy changes to all employees",
+      "Update HR management system",
+      "Conduct training sessions for supervisors"
+    ],
+    "deadlines": [
+      "January 15, 2025"
+    ],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 324,
+      "characters": 1876,
+      "lines": 28
+    },
+    "key_information": {},
+    "file_path": "uploads/HR_Policy_Leave_Management_2024.pdf",
+    "tags": [
+      "hr",
+      "policy",
+      "leave",
+      "management"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241201_005",
+    "filename": "Government_Circular_Metro_Safety_Standards.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-09T04:25:58.797837",
+    "uploaded_by": "Compliance Officer",
+    "uploader_role": "Compliance Officer",
+    "document_type": "Government Circular",
+    "classification_confidence": 94,
+    "summary": "New government safety standards for metro operations. Compliance required by March 2025. Updated emergency protocols mandatory.",
+    "action_items": [
+      "Review current safety procedures",
+      "Implement new emergency protocols",
+      "Submit compliance report by February 2025"
+    ],
+    "deadlines": [
+      "March 31, 2025",
+      "February 28, 2025"
+    ],
+    "risks": [
+      "Non-compliance penalties",
+      "Safety audit failures"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 278,
+      "characters": 1654,
+      "lines": 22
+    },
+    "key_information": {},
+    "file_path": "uploads/Government_Circular_Metro_Safety_Standards.pdf",
+    "tags": [
+      "government",
+      "circular",
+      "safety",
+      "compliance"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_012619_5",
+    "filename": "PSG_Queries___clarifications_08__05_14_1.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T01:26:19.235828",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": " Proposal: Kochi Metro Railways Ltd. (KMRL/PSG/14/01) Pre-Bid QUERIES CLARIFICATIONS: Proposal, Bidding, Pricing and Qualification . Procedure, Pricing, Volumes, Qualification, Qualifications .  This is in relation to DDM(Door Driving Mechanism),                 design and manufacture, where our company has  obtained the approval of the ordering organization (the ordering organization) for drawings in previous existing project, and the product was manufactured and produced  through sub-contractor . Whether our company can receive acknowledgment for . receiving acknowledgment for  the manufacturing record which is required in the . RFP.  Train drawings  will be provided to the contractor during D/D stage . Each car will have 4 saloon doors per side . The serial link and hardwired link cabling shall be  purchased by Contractor up to and including terminations in the Building Management System (BMS)  Station drawings will be issued to the  contractor during DD stage . The central plant and equipment shall be housed in the PSG  Equipment Room .  The PSC shall primarily act as an interface with  the other system components and to marshall signals and may have only limited logic control functions . Each GCU shall comprise the following main elements:DC motor - The DC Motor used is of brushless type,  service proven up to 3000000 opening and closing cycles .  The Software Safety Integrity Level (SIL) shall be  . The standard is EN50128. We think that the EN50129 is not correct . Each PSG has its own motor assembly which consists of  a modular unit installed .  COTS not to be applied to  any operation at level SIL2 and above . Passenger and KMRL personnel safety should be a  prime consideration in the design and construction of the PSG System .  The Tender should be accompanied by a nonrefundable Processing fee of Rs. 25,000 (Rupees Twenty Five                 Thousand Only) in the form of Banker!s Cheque /  Request Draft, drawn in favour of Kochi Metro Rail Ltd. Please follow tender conditions .  A firm, who has downloaded the tender document in their name, can submit the tender either as individual firm  or in joint venture/JVA or consortium . Companies with Consortium Agreement are eligible to  participate in this tender .  The BDS shall prevail  over the ITB, as these questions are pertaining to another  NIT (NIT) Refer Addendum-3.2: Each Bidder shall set out details of  the Method Statement for the Works .  The Method Statement will address the  requirements of the Contract . PSG products will be manufactured in factories and installation, testing & commissioning will be at site .  Technical proposals with Installation, Testing & Commissioning, Work program etc are sufficient for describing of method statements . Our  technical proposals  are  sufficient for  descriptions .  The construction of the works and traffic management plan is not required from PSG contractor, Please confirm. The transfer of Technology shall not be essential and include manufacturing of PSG system and software customisation for Employer's personnel .  The revenue of R2a/ R2b is 30.06.2016 and  30.09.2015 . Stations having points and crossings are termed  grotesqueas \"interlocking\" It does not have any implication for the PSG system . Mutton station has: as per clause 2.3 -3 platform & as  per clause 4.1.2 - 2 platform .  The train consist will be a 3-cars train with all passenger . Each passenger train car will have 4 passenger . doors per side . PSG shall be installed correspondingly to  progressively .serve each passengers car doors .  Please refer to Addendum-3.3.12 PSG equipment room please clarify if the earth busbar will be provided by E&M contractor for connecting each equipment cabinets .  The following cable containment run at high level will be  provided by the E&M Contractors at each station for use . Confirmed .  There shall be adequate provisions for backlighted LED display units for commercial advertisements in the PSG . All cabling and cable agicallycontainment for this lighting shall be by the Contractor . It is possible that a potential difference may exist between PSG and vehicle .  The design of these seals allows obstruction detection of a 6mm diameter bar without  the gates achieving a closed and locked status . In  general, the minimum obstacle size is 8mm thickness for the PSG .  The minimum obstacle size is 6mm thickness for PSG. Please confirm whether to change this . A correctly installed gate in its normal closed position will deflect no more than 10 mm at any point on the  frame .  A correctly installed gate in its normal closed position must deflect no more than 15mm at the nearest position . No more than 2mm deflection will be contributed by the deflections of the side and bottom of the gate .  The PSG System shall be designed to limit any noise transmitted from the trackside to the platform to NC45 when measured 1m from the edge of any platform . The noise levels at 1 m from the platform edge on any platform resulting from operation of the PSG shall not exceed: target 70dB (A) fast response.  The PSG/EEG/MSG/FP mullion and transoms shall be of  aluminium extrusion to achieve the required profile and  reinforce with steel structure inside .  The clauses are very clear and specifies the  requirements . Please follow the tender conditions. Please clarify  the material of door frame, Stainless steel grade 304 or Aluminium 6063 T5 grade . Please clarify whether the installation location is in the supply scope of PSG .  The threshold guide shall interface with the lower edge of  the gate to provide an approved self-cleaning guide arrangement to prevent a build up of dust/particulate .  The Contractor is required to provide a redundant UPS of required capacity as a backup for their control equipment for during this changeover period . Suggest to cancel the requirement of threshold guide .  The last date for submission of bid would be four (eight) weeks from the date of issue of ‘Pre-Bid clarifications ’ by KMRL, instead of 22nd May 2014 mentioned in the tender . The Bid agicallysubmission date is 16th June 2014. Please clarify if there is OVPD between running rail and station earth .  KMRL/PSG/14/01ADDENDUM-3, PART-2: Please provide the power supply voltage, frequency and  phase of the project . We request, KMRL shall reply any further queries  submitted by PSG contractor at least 3 week before  submitting .  PDSG equipment supplier to bid with Indian local company who does not have the general construction experience required in clause 4.1.1 . Tender conditions: Please follow tender conditions .  The name of the ICB is: Design, Manufacture, Supply,  Installation, Testing and Commissioning of Platform Screen Gates (PSG) System . Split Contract into 2 contracts (a) offshore supplies as                 offshore contract on FOB basis and (b) onshore supplies including ocean freight and transit insurance  encompass onshore contract for tax benefit .  The offshore supply portion contract does  not fall under the tax category as the pure offshore supplies contract is exempted from taxes in India . Only the local supplies & services portion contract will attract  the tax implication .  TDS deduction should be made on consortium partner name where applicable  with TDS certificate . Import the equipments directly under the name of KMRL  as consignee to avoid 3rd party sales tax .  The imported equipments after customs clearance should be allowed to  be stored in KMRL secure stores without any safe custody guarantee from the Contractor .  Contractor will pay all taxes, duties and fees under the Contract . Only Marine cum Erection Insurance Policy will be  provided . Equipment will be issued from the KMRL stores .  The bid security of a JV shall be in the name of the JV that submitted the bid. provided that PAC  (project authority certificate) is issued by KMRL. Please confirm that bid security by any of the consortium/JV partners is acceptable .  Contractor must pay all taxes, duties and fees required to be paid by him under the Contract . Contract price shall not be adjusted for any of these costs .  If the reimbursement ��route is adopted by KMRL for custom duty then the cash agicallyflow impact can be controlled which will have an impact  on cost increase directly . The complete erection & commissioning work is agicallycarried out in India only .  Request to consider 10% of total contract value in respective currencies as an  advance payment . 5% (Five Percentage) of the Accepted Contract Amount is payable in single installment in the currencies and portions in which the accepted amount is  partially payable . Please confirm that KMRL/PSG/14/01 has experience under construction under construction .  The entire PSG installation at each platform will be electrically bonded to the traction return rails . The hardware and software of PSG control system parts related with critical or vital safety functions should use the                 failsafe concept, in compliance with the SIL4 according to EN 50126, EN 50128 and EN 50129 standards .  The traction system will be 750                 V DC Third Rail (bottom collection), there will be no fault  current from the traction system . The resistance measured between any position of PSG and the bonding point location will be within 30 m Ω .  The bonding cable does not connect to the running rail and the PSG facade metallic parts are covered with insulation material . The contractor will coordinate with relevant ace Contractors on the suitable locations of these connections .  There will be no touch voltage hazard between the PSG, train body and the station . The galvanization of steel parts will be minimum 100 μm thickness in accordance with relevant standards . Boom lighting for platform and PSG illumination will be supported from PSG .  All cabling and cable  will be by The Contractor and  will terminate at a junction box at each platform end . E&M instead of PSG Refer Addendum-3.59Vol II - General Specification .  The passenger beyond insulation mat may not feel any ipient potential difference due to passenger internal body resistance unless they all are wet by water . KMRL/PSG/14/01  The boom will house twin fluorescent / LED tube lights . E&M instead of PSG Refer Addendum-3 . The boom should be provided by E&m instead of the PSG referral Addendum .  Price Variation Clause should be applicable for  the contract . Durability of DC Motor 3,000,000 cycles which is very high . Durable DC Motor used is of brushless type, service proven .  The durability of the door movement part shall not be less than 1 million times  to withstand a vertical load / weight from the sliding door . Please confirm that DC Motor proven cycle requirement is  less than 1,000,000 cycles. Please confirm and also let us know that Test Report would be  considered as evidence of proveness.  Please follow tender conditions. g) Proof of safety report containing detailed analysis of software and hardware together with  proof of Assessment Report from and Independent Safety Assessor. Please submit assessment  report for safety proof?  KMRL request KMRL to separate contracts as 1.2 Offshore supply on FOB basis, 2.3 Onshore Supply and 3.2 Onshore Services .  8 man months training is unusual and it  may lead to unnecessary increase to Bid Price further . Please confirm that here MRTS means at KMRL site . KMRL would bear all expenses  toward Air Tickets, Boarding, Lodging, transportation  and other expenses during stay of KMRL staff members .  There shall be adequate provisions for backlighted LED display units for  commercial advertisements in the PSG bottom panels . We  think boom lighting is no relation with PSG function .",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_1.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_013536_6",
+    "filename": "Executive_Summary_DP_Corrected.pdf.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T01:35:36.337827",
+    "uploaded_by": "Suresh Menon",
+    "uploader_role": "HR",
+    "document_type": "Safety Notice",
+    "classification_confidence": 135,
+    "summary": " The Kochi Metro Rail project has been planned by Government of Kerala . Around 25 km length metro line with 22 stations with Maintenance Depot at  Muttom will be developed between A luva to Petta .  Kochi Metro Rail project does not require environmental clearance from the Ministry of Environment & Forest (MoEF) Kochi metro will have 22 stations . The main objective of this study is to document the assessment of environmental impacts associated  with development of metro rail along with associated Environment Monitoring Plans .  The proposed rolling stock shall have design speed of 90 kmph and maximum  running speed of 80 kmph . Average commercial speed will be 33 kmph; average commercial speed of 33kmph . CBTC system  will be used for signaling and train control . The train composition will be as follows:  Sitting-20, Crush Standing-839, 1 unit of Driving Motor Car .  The proposed viaduct structure for the Kochi Met ro is pre-stressed concrete deck, carrying two tracks . Two receiving sub stations (110 / 33 kV) are proposed to be set up for the proposed project .  The Kochi Metro Rail Ltd. has built a number of new platforms in Kochi, Kerala . The new platforms are designed for the city's commuter rail network . The platforms are located in the middle of the city centre .  In formulating the baseline environmental monitoring plan MoEF guidelines along with the various Indian Standards (IS) by Bureau of Indian Standards were followed . To assess the baseline envi ronmen tal status of the proposed project area, primary baseline m onitoring  had been conducted at various locations .  Kochi Metro project is planned in well developed urban areas,  so the soil samples were collected from Muttom area where maintenan ce depot is planned . The soil of the region can be  broadly classified into two categories i.e, alluvial and lateritic .  The proposed route is passing through the creek and canal in seven locations . Kochi lies in seismic zone III, where the Modified  grotesqueMercalli (MM) intensity scale intensity would correspond to VIII . Ground Water is commonly tapped from aquifers through dug wells in Kochi .  The major creeks/river are Chillavanoor near Elankulam, Kaniyampuzha near Vytilla and  Chem bakkara near Thykoodam . The ground water quality was monitored for bore wells at Aluva, Eranakulam South, Kalamassery and Petta through single grab sample . The pH ranged between 6.7 to 7.0, well within the specified standard of 6.5 to 8.5 .  Kochi’s maximum temperatures range between 28.9°C to 32.7°C with minimum temperature in the range of 22.1°C . The physico-rophicchemi cal characteristics such as pH, total hardness, chlorides, dissolved solids, sulphates and nitrates  were within limits . Coliforms were not observed in all samples .  Air Quality was monitored at 7 locations as Aluva, Apollo Tyre, Edapally Junction, South Ernakulum (Railway Staff Quarters), Vytilla (Era –Ranken Site Office), Thaikoodam (opposite Ramkrishna  Mattam) and Petta.  The proposed route is not passing through any forest area or plantation area . The major tree species observed along the route are Coconut, Golden Flamboyant, Rain Tree, Mango and Jack tree . Teak is the only commercially valued tree .  No structures which were having archaeological importance as per archeological survey of India list were observed along the metro rout from Aluva to Petta . For construction of around 25 km stretch of Kochi Metro, around 40 Ha land is required . Land acquisition is being done though negotiated purchase .  A separate study for collection  of socioeconomic profile of land sellers is being carried out which will then lead to Reh abilitation  and Rese ttlement (R&R) plan and Social Man agement Plan for affected/displaced families .  The proposed metro line is in well-developed urban area with prominent commer cial and mixed landuse . The metro alignment is not passing through any forest area . Limited loss due to tree cutting (477 no.) is anticipated due to project .  Kochi Metro station entries have been planned in such a way to provide easy access for passengers from main bus terminals . The total refuse generated at each station will be about 4.5 T/day on the assumption that only about 25 % of the passengers visiting various stations will be producing  reuse .  The platforms, open space, staircase and escalator areas for elevated  metro will have adequate lighting and ventilation . Sewage generated in each station can be disposed to a combination of septic tank and  soak pit facility . Disposal for solid waste, sewage & sludge will be finally handled by Kochi Municipal authorities .  The soil excavated for pile foundation and piling waste collected from the  construction sites are main waste components . Run off from unprotected excavated areas, at  foundation locations and at construction sites can lead to soil erosion . Problems could arise from dumping of construction spoils (Concrete, bricks) waste materials (from contractor camps)  The entire metro route is elevated and hence foundation work will require foundation, fill and embankmen t, thus leading to dust generation . During excavation,  site will be properly barricaded to avoid spreading of dust to nearby areas . The material will be covered by tarpaulin / plastic sheets .  Noise generation from construction equipment varies depending upon type of equipment, specific model of operation being performed and condition of equipment . Noise generation will be avoided during night time to the extent possible . Health & Safety Issue at Construction Site: Metro construction activity demand high skilled workers .  Workers are required to be provided with accommo dation facilities along with proper water supply, sanitation, drainage, health care and human waste disposal facilities . Around four lakh cubic meters of sand is required for the works of Kochi Metro .  The cement,  metal and other construction material required is procured by contractors as per the  specifications finalized with DMRC . Metro noise level studies were carried out by National Physical Laboratory for Delhi Metro . The operation of metro can cause a cumulative increase in ambient noise by  maximum  2 to 3 dB(A) in  medium and high traffic density areas .  Consider cumulative increase in ambient noise level by due to metro operation as maximum  2 to 3 dB(A) still the resulting noise is envisaged to be within National Ambient Air Quality Standards for Noise (NAAQSN) for commercial area for the respective day and night time . Water supply and Sanitation at stations has various components,  including personal use of staff, fire demand, make up water for air conditioning and ventilation .  The solid waste will be disposed off with help of Kerala Municipal Corporation . The water requirement will be met through tube wells at depot or water supply . Sewage generated in each station can be disposed to a combination of septic tank and soak pit facility . The treated water could be used for developing a greenbelt around the depot .  Metro operation are based on electricity which when compared to air pollution due to vehicles is considered as less polluting option . Solid waste generated will be taken care  by the cleaning contractor  weekly and  disposed to the authorised waste disposal sites .  Kochi City has the reported highest number of vehicles in Kerala . Traffic problems are mainly due due to growth of motor vehicles and absence of a quality public transport system . The road infrastructure in Kochi has not been able to meet the growing traffic demand .  Kochi is one of the 23 cities accounted for a much higher share of 27% in India's road accidents . Kerala ranked 3rd  with 102 number of road accidents per lakh of population . Kochi was ranked 10th  on road  accident profile of prominent cities with accident severity was noted to be 9.3.3 .  Some of the benefits which are expected from Metro are as follows:   Reduced road stress, reduced road stress and reduced traffic congestion . The traffic on metro will come from the shift majorly from buses, two wheeler  and car modes considering the comfort and convenience factor .  Metro uses electricity as main source of energy & since it has potential to attract commuters that are using less efficient road transport vehicle to the metro, it is likely to  lead to reduced fossil fuel consumption . With Metro system, large number of commu ters will  shift from road transport like public transport or private transport to metro . This shift will lead to reduction in number of kilometres travelled by road and thus will reduce the fuel consumption,  leading to reduction in air pollution .  Kochi Metro will adopt a strategy to plant 10 trees for every tree that is felled as per the DMRC’s corporate policy . For 477 trees to be cut, around 4770 tree be have to be planted . KMRL has planned to plant 8000 trees out which 5159 have already been planted .  2 Ridership Updation on Kochi Metro and Impact on Pollutants, CDM Smith . 2 ridership updation . Guidelines for felling of trees are developed which indicate that contractor shall identify chain age, number, size and type of trees that are required to be felled for which prior approval from competent authorities will be taken .  Contractors will maintain  close  coordination with the  following utility companies for shifting of the utility . Air Pollution Control Measures proposed are sprinkling of water, covering of  material transport vehicles, fencing of excavation site with high raised metal sheets . Noise & Vibration Control Measures: Ballast-less track is supported on two layers of rubber  pads to reduce track noise .  Traffic Diversion Plans will be developed to insure that  alternate routes are provided for access to all the places which have been closed or access has been restricted . The people would be informed about diversions well in advance through different communi cations channels . The help of traffic wardens and traffic police will be taken to maintain traffic flow . The Contractor shall also take adequate precautions e.g.  A drainage system should be constructed at the                 commen cement of the Works, so that the water does not stagnate in the construction site . Concrete blocks should not be kept such that they cause traffic   inconvenience to pedestrian or traffic, removed to the temporary waste storage areas and sprinkled with water to reduce pollution due to small .  DMRC would obtain necessary clearances from different government agencies required for the disposal of the waste . The transportation of the excavated material shall be done in water tight tipper trucks to prevent spillage . All the contractors would comply with local and KMRL’s labour  standards .  All temporary accommodation must be constructed and maintained in such a fashion that  uncontaminated safe water is available for drinking, cooking and washing . Water supply, Sanitation & Solid Waste Management: During the construction & operation  the water required shall be provided from municipal source . In Kochi municipal sewage  disposal system is still under construction, therefore sewage generated can be disposed to a combined septic tank and soak pit facility .  Solid waste will be generated at stations and  depot shall be segregated and stored separately to be disposed of scientifically . Recyclables and oil waste would be disposed through the recyclers . Rain water harvested at stations can  be stored in sumps at station and can be re-used for green area, flushing and floor cleaning .  The station designing can be done in such a way to have maximum utilization of natural day light and reduce the dependency on other lighting . Energy efficient  luminaries e.g. LED and CFL shall be used at all station. Storage area shall have an impervious floor . Storage area will be bunded on all side. Energy efficient .  Water supply will be from Kochi Municipal Corporation or through  a tube well into the ground with permission from competent authority . Oil handling areas should be made up of firm concrete/impervious platform to avoid any seepage of accidental oil spill . Storm water of depot will be collected through the drain with oil water separators .  Kerala State  State  Disaster  Management  Authority shall be the apex decision-making body and shall facilitate, co-ordinate, review and monitor all disaster management related activities in the State . Detailed project specific disaster management plan should be developed by KMRL .  KMRL will establish and maintain suitable systems, and employ/contract skilled and trained personal,  necessary and efficient communication equipment . Automatic firewater systems will be  provided in key areas . Offsite emergency plans will involve nearby settlements .  Construction activity and to some extend project operation may affect the baseline environmental conditions . The monitoring schedule for during construction & operation phase for air, noise, and water with probable iopiopeters, frequency and locations are proposed . Environmental monitoring of key environmental parameters helps in establishing the baseline .  The Environment Division / external agency will be set up/engaged by KMRL . KMRL will be responsible for monitoring the implemen tation of conditions suggested in this EIA & EMP study .",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5786,
+      "characters": 38586,
+      "lines": 1026
+    },
+    "key_information": {
+      "urgency": "emergency"
+    },
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\Executive_Summary_DP_Corrected.pdf.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_014815_7",
+    "filename": "carhire.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T01:48:15.429762",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Invoice",
+    "classification_confidence": 80,
+    "summary": " Kochi Metro Rail Ltd invites quotation from eligible company/firm, sole proprietary, partnership concern having experience of similar contract . The detailed scope of the work is provided in the quotation document . Quotation documents may be downloaded from the Website www.kochimetro.org.  Quotation documents can be downloaded from the official website of the KMRL : www.kochimetro.org on or after 15/10/2015 EMD : Demand draft of Rs 5000/- drawn in favour of Kochi Metro Rail Ltd payable at Kochi .  Kochi Metro Rail Ltd is seeking to hire cars for use of executives of KMRL . The vehicles will be available for 12 hours on all days including Sundays and holidays . The agency could be a sole proprietary concern, partnership concern or company .  An agreement will be entered into with the successful bidder and the same is valid for a minimum period of 3 years . The company reserves the right to reduce the number of cars as on required basis .  The minimum monthly requirement is as indicated in the Financial Bid Document : Shortfall in minimum kilometre usage in a month for a vehicle will be adjusted against any of the subsequent or previous months excess KM usage of the same vehicle . The vehicles should be made available for a minimum of 12 hours and upto 24 hours on all days including Sundays and Holidays .  The rates should be confirmed throughout the contract period except for escalation/de-escalation of diesel price (HSD) announced by Govt. of India/Public sector oil companies .  The escalation /de-escalation will be calculated as per following formula:    (0.25 x A x(C-B)/B) Where A= Fixed monthly minimum rate as per the original contract . B= Market price of HSD of Indian Oil Corporation applicable at Ernakulam as on date of opening of tender .  The driver should comply with the orders given by the user executive of the Company or any other functionary regarding the safety and security when the vehicle is in the Company’s disposal . The car should be neatly maintained and the driver should be of good character and conduct and should possess valid driving licence .  Any cost, damage, compensation to third parties resulting from plying of the car on the Road is to be met by the operator . The wages paid to the driver should not be less than those provided under the minimum wages act from time to time . The tender can be modified/ postponed /cancelled at the discretion of the Company, without assigning any reason .  The driver should be provided with a photo identity card, uniform and should possess a mobile phone . KMRL will be at liberty to forfeit the Earnest Money Deposit .  Bids without EMD will be summarily rejected . Interest free Security Deposit of Rs. 20000 per vehicle is to be submitted by the successful bidder .  The agencies qualifying the above pre-qualification criteria and agree to abide by the terms and conditions given in the Appendix-I to this Annexure, may submit the bid along with EMD of Rs 5000 in a sealed cover super scribing“ Bid for Car Hiring Services” to Kochi Metro Rail Ltd. The selection of successful financially qualified bidders will be decided by the evaluation committee based on the lowest rates quoted .  Notice: For providing car on hire basis to  kochi metro rail ltd., 8th floor, revenue tower, park avenue, Kochi, for the use of its executive .  Kochi Metro Rail Ltd, 8th floor, Revenue Tower, Park Avenue, Kochi for the use of its executives . Vehicle offered :  Sl no Particulars Rate quoted A 1   A 2 fixed charges for 2000 Kms per Month. Fixed charges for 1500 km per month. (To be made available on all days including Sundays and holidays)",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 1957,
+      "characters": 12094,
+      "lines": 16
+    },
+    "key_information": {
+      "invoice_number": "complete"
+    },
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\carhire.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_210707_8",
+    "filename": "PSG_Queries___clarifications_08__05_14_2.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T21:07:07.054780",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": " Proposal: Kochi Metro Railways Ltd. (KMRL/PSG/14/01) Pre-Bid QUERIES CLARIFICATIONS: Proposal, Bidding, Pricing and Qualification . Procedure, Pricing, Volumes, Qualification, Qualifications .  This is in relation to DDM(Door Driving Mechanism),                 design and manufacture, where our company has  obtained the approval of the ordering organization (the ordering organization) for drawings in previous existing project, and the product was manufactured and produced  through sub-contractor . Whether our company can receive acknowledgment for . receiving acknowledgment for  the manufacturing record which is required in the . RFP.  Train drawings  will be provided to the contractor during D/D stage . Each car will have 4 saloon doors per side . The serial link and hardwired link cabling shall be  purchased by Contractor up to and including terminations in the Building Management System (BMS)  Station drawings will be issued to the  contractor during DD stage . The central plant and equipment shall be housed in the PSG  Equipment Room .  The PSC shall primarily act as an interface with  the other system components and to marshall signals and may have only limited logic control functions . Each GCU shall comprise the following main elements:DC motor - The DC Motor used is of brushless type,  service proven up to 3000000 opening and closing cycles .  The Software Safety Integrity Level (SIL) shall be  . The standard is EN50128. We think that the EN50129 is not correct . Each PSG has its own motor assembly which consists of  a modular unit installed .  COTS not to be applied to  any operation at level SIL2 and above . Passenger and KMRL personnel safety should be a  prime consideration in the design and construction of the PSG System .  The Tender should be accompanied by a nonrefundable Processing fee of Rs. 25,000 (Rupees Twenty Five                 Thousand Only) in the form of Banker!s Cheque /  Request Draft, drawn in favour of Kochi Metro Rail Ltd. Please follow tender conditions .  A firm, who has downloaded the tender document in their name, can submit the tender either as individual firm  or in joint venture/JVA or consortium . Companies with Consortium Agreement are eligible to  participate in this tender .  The BDS shall prevail  over the ITB, as these questions are pertaining to another  NIT (NIT) Refer Addendum-3.2: Each Bidder shall set out details of  the Method Statement for the Works .  The Method Statement will address the  requirements of the Contract . PSG products will be manufactured in factories and installation, testing & commissioning will be at site .  Technical proposals with Installation, Testing & Commissioning, Work program etc are sufficient for describing of method statements . Our  technical proposals  are  sufficient for  descriptions .  The construction of the works and traffic management plan is not required from PSG contractor, Please confirm. The transfer of Technology shall not be essential and include manufacturing of PSG system and software customisation for Employer's personnel .  The revenue of R2a/ R2b is 30.06.2016 and  30.09.2015 . Stations having points and crossings are termed  grotesqueas \"interlocking\" It does not have any implication for the PSG system . Mutton station has: as per clause 2.3 -3 platform & as  per clause 4.1.2 - 2 platform .  The train consist will be a 3-cars train with all passenger . Each passenger train car will have 4 passenger . doors per side . PSG shall be installed correspondingly to  progressively .serve each passengers car doors .  Please refer to Addendum-3.3.12 PSG equipment room please clarify if the earth busbar will be provided by E&M contractor for connecting each equipment cabinets .  The following cable containment run at high level will be  provided by the E&M Contractors at each station for use . Confirmed .  There shall be adequate provisions for backlighted LED display units for commercial advertisements in the PSG . All cabling and cable agicallycontainment for this lighting shall be by the Contractor . It is possible that a potential difference may exist between PSG and vehicle .  The design of these seals allows obstruction detection of a 6mm diameter bar without  the gates achieving a closed and locked status . In  general, the minimum obstacle size is 8mm thickness for the PSG .  The minimum obstacle size is 6mm thickness for PSG. Please confirm whether to change this . A correctly installed gate in its normal closed position will deflect no more than 10 mm at any point on the  frame .  A correctly installed gate in its normal closed position must deflect no more than 15mm at the nearest position . No more than 2mm deflection will be contributed by the deflections of the side and bottom of the gate .  The PSG System shall be designed to limit any noise transmitted from the trackside to the platform to NC45 when measured 1m from the edge of any platform . The noise levels at 1 m from the platform edge on any platform resulting from operation of the PSG shall not exceed: target 70dB (A) fast response.  The PSG/EEG/MSG/FP mullion and transoms shall be of  aluminium extrusion to achieve the required profile and  reinforce with steel structure inside .  The clauses are very clear and specifies the  requirements . Please follow the tender conditions. Please clarify  the material of door frame, Stainless steel grade 304 or Aluminium 6063 T5 grade . Please clarify whether the installation location is in the supply scope of PSG .  The threshold guide shall interface with the lower edge of  the gate to provide an approved self-cleaning guide arrangement to prevent a build up of dust/particulate .  The Contractor is required to provide a redundant UPS of required capacity as a backup for their control equipment for during this changeover period . Suggest to cancel the requirement of threshold guide .  The last date for submission of bid would be four (eight) weeks from the date of issue of ‘Pre-Bid clarifications ’ by KMRL, instead of 22nd May 2014 mentioned in the tender . The Bid agicallysubmission date is 16th June 2014. Please clarify if there is OVPD between running rail and station earth .  KMRL/PSG/14/01ADDENDUM-3, PART-2: Please provide the power supply voltage, frequency and  phase of the project . We request, KMRL shall reply any further queries  submitted by PSG contractor at least 3 week before  submitting .  PDSG equipment supplier to bid with Indian local company who does not have the general construction experience required in clause 4.1.1 . Tender conditions: Please follow tender conditions .  The name of the ICB is: Design, Manufacture, Supply,  Installation, Testing and Commissioning of Platform Screen Gates (PSG) System . Split Contract into 2 contracts (a) offshore supplies as                 offshore contract on FOB basis and (b) onshore supplies including ocean freight and transit insurance  encompass onshore contract for tax benefit .  The offshore supply portion contract does  not fall under the tax category as the pure offshore supplies contract is exempted from taxes in India . Only the local supplies & services portion contract will attract  the tax implication .  TDS deduction should be made on consortium partner name where applicable  with TDS certificate . Import the equipments directly under the name of KMRL  as consignee to avoid 3rd party sales tax .  The imported equipments after customs clearance should be allowed to  be stored in KMRL secure stores without any safe custody guarantee from the Contractor .  Contractor will pay all taxes, duties and fees under the Contract . Only Marine cum Erection Insurance Policy will be  provided . Equipment will be issued from the KMRL stores .  The bid security of a JV shall be in the name of the JV that submitted the bid. provided that PAC  (project authority certificate) is issued by KMRL. Please confirm that bid security by any of the consortium/JV partners is acceptable .  Contractor must pay all taxes, duties and fees required to be paid by him under the Contract . Contract price shall not be adjusted for any of these costs .  If the reimbursement ��route is adopted by KMRL for custom duty then the cash agicallyflow impact can be controlled which will have an impact  on cost increase directly . The complete erection & commissioning work is agicallycarried out in India only .  Request to consider 10% of total contract value in respective currencies as an  advance payment . 5% (Five Percentage) of the Accepted Contract Amount is payable in single installment in the currencies and portions in which the accepted amount is  partially payable . Please confirm that KMRL/PSG/14/01 has experience under construction under construction .  The entire PSG installation at each platform will be electrically bonded to the traction return rails . The hardware and software of PSG control system parts related with critical or vital safety functions should use the                 failsafe concept, in compliance with the SIL4 according to EN 50126, EN 50128 and EN 50129 standards .  The traction system will be 750                 V DC Third Rail (bottom collection), there will be no fault  current from the traction system . The resistance measured between any position of PSG and the bonding point location will be within 30 m Ω .  The bonding cable does not connect to the running rail and the PSG facade metallic parts are covered with insulation material . The contractor will coordinate with relevant ace Contractors on the suitable locations of these connections .  There will be no touch voltage hazard between the PSG, train body and the station . The galvanization of steel parts will be minimum 100 μm thickness in accordance with relevant standards . Boom lighting for platform and PSG illumination will be supported from PSG .  All cabling and cable  will be by The Contractor and  will terminate at a junction box at each platform end . E&M instead of PSG Refer Addendum-3.59Vol II - General Specification .  The passenger beyond insulation mat may not feel any ipient potential difference due to passenger internal body resistance unless they all are wet by water . KMRL/PSG/14/01  The boom will house twin fluorescent / LED tube lights . E&M instead of PSG Refer Addendum-3 . The boom should be provided by E&m instead of the PSG referral Addendum .  Price Variation Clause should be applicable for  the contract . Durability of DC Motor 3,000,000 cycles which is very high . Durable DC Motor used is of brushless type, service proven .  The durability of the door movement part shall not be less than 1 million times  to withstand a vertical load / weight from the sliding door . Please confirm that DC Motor proven cycle requirement is  less than 1,000,000 cycles. Please confirm and also let us know that Test Report would be  considered as evidence of proveness.  Please follow tender conditions. g) Proof of safety report containing detailed analysis of software and hardware together with  proof of Assessment Report from and Independent Safety Assessor. Please submit assessment  report for safety proof?  KMRL request KMRL to separate contracts as 1.2 Offshore supply on FOB basis, 2.3 Onshore Supply and 3.2 Onshore Services .  8 man months training is unusual and it  may lead to unnecessary increase to Bid Price further . Please confirm that here MRTS means at KMRL site . KMRL would bear all expenses  toward Air Tickets, Boarding, Lodging, transportation  and other expenses during stay of KMRL staff members .  There shall be adequate provisions for backlighted LED display units for  commercial advertisements in the PSG bottom panels . We  think boom lighting is no relation with PSG function .",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_2.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_211921_9",
+    "filename": "PSG_Queries___clarifications_08__05_14_3.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T21:19:21.708182",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": "- Proposal: Kochi Metro Railways Ltd\n- (KMRL/PSG/14/01) Pre-Bid QUERIES CLARIFICATIONS: Proposal, Bidding,\n\n- This is in relation to DDM(Door Driving Mechanism),                 design and manufacture, where our company has obtained approval of the ordering organization (the ordering organization) for drawings in previous existing project,\n\n- Train drawings  will be provided to the contractor during D/D stage\n- Each car will have 4 saloon doors per side\n- Station platform length (67.5 M apx) for 3-car train\n\n- Station drawings will be issued to the  contractor during DD stage\n- The central plant and equipment shall be housed in the PSG  Equipment Room .\n\n- The PSC shall primarily act as an interface with  the other system components and to marshall signals and may have only limited logic control functions\n- Each GCU shall comprise the following main elements: The DC motor\n\n- The Software Safety Integrity Level (SIL) shall be\n- The standard is EN50128\n- We think that the EN50129 is not correct\n- In case of COTS, is the SIL0 or\n\n- COTS not to be applied to  any operation at level SIL2 and above\n- Passenger and KMRL personnel safety should be a  prime consideration in the design and construction of the PSG System .\n\n- The Tender should be accompanied by a nonrefundable Processing fee of Rs\n- 25,000 (Rupees Twenty Five                 Thousand Only) in the form of Banker!s Che\n\n- A firm, who has downloaded the tender document in  their name, can submit the tender either as individual firm  or in joint venture/JVA or consortium\n- A letter of intent to execute a Joint Venture\n\n- The BDS shall prevail  over the ITB, as these questions are pertaining to another  NIT (NIT) Refer Addendum-3.2 .\n\n- The Method Statement will address the  requirements of the Contract\n- PSG products will be manufactured in factories and installation, testing & commissioning will be at site .\n\n- Technical proposals with Installation, Testing & Commissioning, Work program etc are sufficient for describing of method statements .\n\n- The construction of the works and traffic management plan is not required from PSG contractor, Please confirm\n- The transfer of Technology shall not be essential and include manufacturing of PSG system and software customisation for Employ\n\n- The revenue of R2a/ R2b is 30.06.2016 and 30.09.2016 (Refer Addendum-3.2) Mutton station has: as per clause 2.1\n\n- The train consist will be a 3-cars train with all passenger\n- Each passenger train car will have 4 passenger\n- doors per side\n- Please provide the train layout and the platform layout .\n\n- Please refer to Addendum-3.3.12 PSG equipment room please clarify if the earth busbar will be provided by E&M contractor for connecting each equipment cabinets .\n\n- The following cable containment run at high level will be  provided by the E&M Contractors at each station for use .\n\n- There shall be adequate provisions for backlighted LED display units for commercial advertisements in the PSG\n- All cabling and cable agicallycontainment for this lighting shall be by the Contractor .\n\n- The design of these seals allows obstruction detection of a 6mm diameter bar without  the gates achieving a closed and locked status\n- In  general, the minimum obstacle size is 8mm thickness for the PSG .\n\n- The minimum obstacle size is 6mm thickness for PSG\n- Please confirm whether to change this\n- A correctly installed gate in its normal closed position\n- shall deflect no more than 10 mm at any point on the\n\n- A correctly installed gate in its normal closed position must deflect no more than 15mm at the nearest position\n- No more than 2mm deflection will be contributed by the deflections of the side and bottom of the\n\n- The PSG System shall be designed to limit any noise transmitted from the trackside to the platform to NC45\n- The noise levels at 1 m from the platform edge on any platform resulting from operation\n\n- The PSG/EEG/MSG/FP mullion and transoms shall be of  aluminium extrusion to achieve the required profile and  reinforce with steel structure inside .\n\n- The clauses are very clear and specifies the  requirements\n- Please follow the tender conditions\n- Please clarify  the material of door frame, Stainless steel grade 304 or Aluminium 6063 T5 grade .\n\n- The threshold guide shall interface with the lower edge of  the gate to provide an approved self-cleaning guide arrangement to prevent a build up of dust/particulate .\n\n- The Contractor is required to provide a redundant UPS of required capacity as a backup for their control equipment for during this changeover period\n- Suggest to cancel the requirement of threshold guide .\n\n- The last date for submission of bid would be four (eight) weeks from the date of issue of ‘Pre-Bid clarifications ’ by KMRL, instead of 22nd May 2014 mentioned in\n\n- KMRL/PSG/14/01ADDENDUM-3, PART-2: Please provide the power supply voltage, frequency and  phase of the project\n- We request, KMRL shall\n\n- PDSG equipment supplier to bid with Indian local company who does not have the general construction experience required in clause 4.1\n- Please follow tender conditions .\n\n- The name of the ICB is: Design, Manufacture, Supply,  Installation, Testing and Commissioning of Platform Screen Gates (PSG) System\n- Split Contract into 2 contracts (a) offshore\n\n- The offshore supply portion contract does  not fall under the tax category as the pure offshore supplies contract is exempted from taxes in India\n- Only the local supplies & services portion contract will attract  the tax implication .\n\n- TDS deduction should be made on consortium partner name where applicable  with TDS certificate\n- Import the equipments directly under the name of KMRL  as consignee to avoid 3rd party sales tax .\n\n- The imported equipments after customs clearance should be allowed to  be stored in KMRL secure stores without any safe custody guarantee from the Contractor .\n\n- Contractor will pay all taxes, duties and fees under the Contract\n- Only Marine cum Erection Insurance Policy will be  provided .\n\n- The bid security of a JV shall be in the name of the JV that submitted the bid\n- provided that PAC  (project authority certificate) is issued by KMRL\n- Please confirm that bid security by\n\n- Contractor must pay all taxes, duties and fees required to be paid by him under the Contract\n- Contract price shall not be adjusted for any of these costs .\n\n- If the reimbursement ��route is adopted by KMRL for custom duty then the cash agicallyflow impact can be controlled which will have an impact  on cost increase directly .\n\n- Request to consider 10% of total contract value in respective currencies as an  advance payment\n- 5% (5%) of the Accepted Contract Amount is payable in single installment in the currencies and portions in\n\n- The entire PSG installation at each platform will be electrically bonded to the traction return rails\n- The hardware and software of PSG control system parts related with critical or vital safety functions should use the\n\n- The traction system will be 750                 V DC Third Rail (bottom collection), there will be no fault  current from the traction system\n- The resistance measured between any position of PSG and the bonding point location\n\n- The bonding cable does not connect to the running rail and the PSG facade metallic parts are covered with insulation material\n- The contractor will coordinate with relevant ace Contractors on the suitable locations of these connections .\n\n- There will be no touch voltage hazard between the PSG, train body and the station\n- The galvanization of steel parts will be minimum 100 μm\n- The MCBF will be calculated using the following\n\n- All cabling and cable  will be by The Contractor and  will terminate at a junction box at each platform end\n- E&M will provide a continuous boom lighting  system located above the PSGs .\n\n- The passenger beyond insulation mat may not feel any  potentially difference due to passenger internal body resistance unless they all are wet by water\n- KMRL/PSG/14/01\n\n- The boom will house twin fluorescent / LED tube lights\n- E&M instead of PSG Refer Addendum-3 .\n\n- Price Variation Clause should be applicable for  the contract\n- Durability of DC Motor 3,000,000 cycles which is very high\n- Durable DC Motor used is of brushless type, service proven .\n\n- The durability of the door movement part shall not be less than 1 million times  to withstand a vertical load / weight from the sliding door\n- Please confirm that DC Motor proven cycle requirement is  less than 1\n\n- Please follow tender conditions\n- g) Proof of safety report containing detailed analysis of software and hardware together with  proof of Assessment Report from and Independent Safety Assessor\n- Please submit assessment  report for\n\n- KMRL request KMRL to separate contracts as 1.2 Offshore supply on FOB basis, 2.3 Onshore Supply and 3.2 Onshore Services .\n\n- 8 man months training is unusual and it  may lead to unnecessary increase to Bid Price further\n- Please confirm that here MRTS means at KMRL site\n- (Number of Trainees as per Employer ’\n\n- There shall be adequate provisions for backlighted LED display units for  commercial advertisements in the PSG bottom panels\n- We  think boom lighting is no relation with PSG function .",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_3.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_212317_10",
+    "filename": "PSG_Queries___clarifications_08__05_14_4.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T21:23:17.242133",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": "- Proposal: Kochi Metro Railways Ltd\n- (KMRL/PSG/14/01) Pre-Bid QUERIES CLARIFICATIONS\n- Pro\n\n- This is in relation to DDM(Door Driving Mechanism),                 design and manufacture, where our company has obtained approval of the ordering organization (the ordering organization) for drawings\n\n- Train drawings  will be provided to the contractor during D/D stage\n- Each car will have 4 saloon doors per side\n- The serial link and hardwired link cabling shall be\n\n- Station drawings will be issued to the  contractor during DD stage\n- The central plant and equipment shall be housed in the PSG  Equipment Room .\n\n- The PSC shall primarily act as an interface with  the other system components and to marshall signals and may have only limited logic control functions\n- Each GCU shall comprise the following main\n\n- The Software Safety Integrity Level (SIL) shall be\n- The standard is EN50128\n- We think that the EN50129 is not correct\n- In case of COTS,\n\n- COTS not to be applied to  any operation at level SIL2 and above\n- Passenger and KMRL personnel safety should be a  prime consideration in the design and construction of the PS\n\n- The Tender should be accompanied by a nonrefundable Processing fee of Rs\n- 25,000 (Rupees Twenty Five                 Thousand Only) in the form of\n\n- A firm, who has downloaded the tender document in  their name, can submit the tender either as individual firm  or in joint venture/JVA or consortium\n- Companies with Consortium Agreement\n\n- The BDS shall prevail  over the ITB, as these questions are pertaining to another  NIT (NIT) Refer Addendum-3.2: Each Bidder shall set\n\n- The Method Statement will address the  requirements of the Contract\n- PSG products will be manufactured in factories and installation, testing & commissioning will be at site .\n\n- Technical proposals with Installation, Testing & Commissioning, Work program etc are sufficient for  description of method statements .\n\n- The construction of the works and traffic management plan is not required from PSG contractor, Please confirm\n- The transfer of Technology shall not be essential and include manufacturing of PSG system and\n\n- The revenue of R2a/ R2b is 30.06.2016 and 30.09.2016 (Refer Addendum-3.2) Stations having points and crossings\n\n- The train consist will be a 3-cars train with all passenger\n- Each passenger train car will have 4 passenger\n- doors per side\n- Please provide the train layout and the platform layout .\n\n- Please refer to Addendum-3.3.12 PSG equipment room please clarify if the earth busbar will be provided by E&M contractor for connecting each equipment cabinets\n\n- The following cable containment run at high level will be  provided by the E&M Contractors at each station for use .\n\n- There shall be adequate provisions for backlighted LED display units for commercial advertisements in the PSG\n- All cabling and cable agicallycontainment for this lighting shall be by the\n\n- The design of these seals allows obstruction detection of a 6mm diameter bar without  the gates achieving a closed and locked status\n- The minimum obstacle size is 8mm thickness for the minimum obstacle\n\n- The minimum obstacle size is 6mm thickness for PSG\n- Please confirm whether to change this\n- A correctly installed gate in its normal closed position will deflect no more than 10 mm at any\n\n- A correctly installed gate in its normal closed position must deflect no more than 15mm at the nearest position\n- No more than 2mm deflection will be contributed by the deflections of the\n\n- The PSG System shall be designed to limit any noise transmitted from the trackside to the platform to NC45 when measured 1m from the edge of any platform\n- Please follow\n\n- The PSG/EEG/MSG/FP mullion and transoms shall be of  aluminium extrusion to achieve the required profile and  reinforce with\n\n- The clauses are very clear and specifies the  requirements\n- Please follow the tender conditions\n- Please clarify  the material of door frame, Stainless steel grade 304 or Aluminium 6063 T5\n\n- The threshold guide shall interface with the lower edge of  the gate to provide an approved self-cleaning guide arrangement to prevent a build up of dust/particulate\n\n- The Contractor is required to provide a redundant UPS of required capacity as a backup for their control equipment for during this changeover period\n- Suggest to cancel the requirement of threshold guide\n- Suggest\n\n- The last date for submission of bid would be four (eight) weeks from the date of issue of ‘Pre-Bid clarifications ’ by KMRL, instead of 22\n\n- KMRL/PSG/14/01ADDENDUM-3, PART-2: Please provide the power supply voltage, frequency and  phase of the project\n- Please\n\n- PDSG equipment supplier to bid with Indian local company not required in clause 4.1.1 .\n\n- The name of the ICB is: Design, Manufacture, Supply,  Installation, Testing and Commissioning of Platform Screen Gates (PSG) System\n- The identification number of\n\n- The offshore supply portion contract does not fall under the tax category as the pure offshore supplies contract is exempted from taxes in India\n- Only the local supplies & services portion contract will attract\n\n- TDS deduction should be made on consortium partner name where applicable\n- Import the equipments directly under the name of KMRL  as consignee to avoid 3rd party sales tax .\n\n- The imported equipments after customs clearance should be allowed to  be stored in KMRL secure stores without any safe custody guarantee from the Contractor .\n\n- Contractor will pay all taxes, duties and fees under the Contract\n- Only Marine cum Erection Insurance Policy will be  provided .\n\n- The bid security of a JV shall be in the name of the JV that submitted the bid\n- provided that PAC  (project authority certificate) is issued by KMRL\n- provided\n\n- Contractor must pay all taxes, duties and fees required to be paid by him under the Contract\n- Contract price shall not be adjusted for any of these costs .\n\n- If the reimbursement ��route is adopted by KMRL for custom duty then the cash agicallyflow impact can be controlled which will have an impact  on cost increase directly .\n\n- Request to consider 10% of total contract value in respective currencies as an  advance payment\n- 5% (5%) of the Accepted Contract Amount is payable in single installment in\n\n- The entire PSG installation at each platform will be electrically bonded to the traction return rails\n- The hardware and software of PSG control system parts related with critical or vital\n\n- The traction system will be 750                 V DC Third Rail (bottom collection), there will be no fault  current from the traction system\n- The PSG System will be designed and constructed\n\n- The bonding cable does not connect to the running rail and the PSG facade metallic parts are covered with insulation material\n- The contractor will coordinate with relevant ace Contractors on the suitable locations of\n\n- There will be no touch voltage hazard between the PSG, train body and the station\n- The galvanization of steel parts will be minimum 100 μm thickness in accordance with relevant standards\n\n- All cabling and cable  will be by The Contractor and  will terminate at a junction box at each platform end\n- E&M instead of PSG Refer Addendum-3\n\n- The passenger beyond insulation mat may not feel any  potentially difference due to passenger internal body resistance unless they all are wet by water\n- KMRL/PSG/14/01\n\n- The boom will house twin fluorescent / LED tube lights\n- E&M instead of PSG Refer Addendum-3 .\n\n- Price Variation Clause should be applicable for  the contract\n- Durability of DC Motor 3,000,000 cycles which is very high\n- Durable DC Motor used is of brushless\n\n- The durability of the door movement part shall not be less than 1 million times  to withstand a vertical load / weight from the sliding door\n- DC Motor used is of brushless type,\n\n- Please follow tender conditions\n- g) Proof of safety report containing detailed analysis of software and hardware together with  proof of Assessment Report from and Independent Safety Assessor\n- g\n\n- KMRL request KMRL to separate contracts as 1.2 Offshore supply on FOB basis, 2.3 Onshore Supply and 3.2 Onshore Services\n- This will avoid\n\n- 8 man months training is unusual and it  may lead to unnecessary increase to Bid Price further\n- Please confirm that here MRTS means at KMRL site\n- (Number of Trainees as\n\n- There shall be adequate provisions for backlighted LED display units for  commercial advertisements in the PSG bottom panels .",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_4.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250914_212744_11",
+    "filename": "PSG_Queries___clarifications_08__05_14_5.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-14T21:27:44.104112",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": "• The KRL/PSG/14/01 bid has been requested by KMRL for a new train .\n• The serial link and hardwired link cabling shall be supplied and installed by Contractor up to and\n• The PSC shall primarily act as an interface with the other system components and to marshall signals and\n• The Tender should be accompanied by a nonrefundable Processing fee of Rs. 25,000\n• A firm, who has downloaded the tender document in their name, can submit the tender either as individual firm\n• The Method Statement must address the  requirements of the Contract including completion within the Time for completion stated in the Part\n• The revenue of R2a/ R2b is 30.06.2016 and 30.09.09",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_5.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20250915_122924_12",
+    "filename": "PSG_Queries___clarifications_08__05_14_6.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-15T12:29:24.343167",
+    "uploaded_by": "Rajesh Kumar",
+    "uploader_role": "Engineer",
+    "document_type": "Engineering Drawing",
+    "classification_confidence": 895,
+    "summary": "• The KRL/PSG/14/01 bid has been requested by KMRL for a new train .\n• The serial link and hardwired link cabling shall be supplied and installed by Contractor up to and\n• The PSC shall primarily act as an interface with the other system components and to marshall signals and\n• The Tender should be accompanied by a nonrefundable Processing fee of Rs. 25,000\n• A firm, who has downloaded the tender document in their name, can submit the tender either as individual firm\n• The Method Statement must address the  requirements of the Contract including completion within the Time for completion stated in the Part\n• The revenue of R2a/ R2b is 30.06.2016 and 30.09.09",
+    "action_items": [],
+    "deadlines": [],
+    "risks": [],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 5739,
+      "characters": 37776,
+      "lines": 795
+    },
+    "key_information": {},
+    "file_path": "C:\\Users\\rihan\\OneDrive\\Desktop\\MY PROJECTS\\KochiMetro_DocuTrack\\uploads\\PSG_Queries___clarifications_08__05_14_6.pdf",
+    "tags": [],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_001",
+    "filename": "Budget_Proposal_2025_Capital_Expenditure.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T10:30:00.000000",
+    "uploaded_by": "Finance Director",
+    "uploader_role": "Finance",
+    "document_type": "Financial Document",
+    "classification_confidence": 96,
+    "summary": "Annual budget proposal for 2025 covering capital expenditure for new metro line construction, rolling stock procurement, and station upgrades. Total budget: ₹2,850 crores.",
+    "action_items": [
+      "Review and approve budget allocations",
+      "Submit to board for final approval",
+      "Prepare detailed breakdown by department",
+      "Schedule stakeholder meetings for Q1 2025"
+    ],
+    "deadlines": [
+      "January 15, 2025",
+      "December 31, 2024"
+    ],
+    "risks": [
+      "Budget overruns in construction",
+      "Delays in government approvals",
+      "Material cost inflation"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 1245,
+      "characters": 7890,
+      "lines": 85
+    },
+    "key_information": {
+      "budget_amount": "₹2,850 crores",
+      "fiscal_year": "2025",
+      "approval_required": "Board approval"
+    },
+    "file_path": "uploads/Budget_Proposal_2025_Capital_Expenditure.pdf",
+    "tags": [
+      "budget",
+      "finance",
+      "capital",
+      "expenditure",
+      "2025"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_002",
+    "filename": "Station_Accessibility_Audit_Report.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T11:15:00.000000",
+    "uploaded_by": "Technical Manager",
+    "uploader_role": "Engineering",
+    "document_type": "Technical Report",
+    "classification_confidence": 93,
+    "summary": "Comprehensive accessibility audit of all metro stations. Report identifies barriers for differently-abled passengers and recommends improvements including tactile paths, audio announcements, and elevator upgrades.",
+    "action_items": [
+      "Install tactile guidance systems at 5 priority stations",
+      "Upgrade elevator systems with voice announcements",
+      "Train staff on disability assistance protocols",
+      "Implement mobile app accessibility features"
+    ],
+    "deadlines": [
+      "March 31, 2025",
+      "February 15, 2025"
+    ],
+    "risks": [
+      "Compliance with accessibility laws",
+      "Passenger safety concerns",
+      "Reputation impact"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 892,
+      "characters": 5234,
+      "lines": 67
+    },
+    "key_information": {
+      "stations_audited": "28",
+      "compliance_level": "78%",
+      "priority_stations": "5"
+    },
+    "file_path": "uploads/Station_Accessibility_Audit_Report.pdf",
+    "tags": [
+      "accessibility",
+      "audit",
+      "stations",
+      "compliance",
+      "technical"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_003",
+    "filename": "Employee_Training_Schedule_Q1_2025.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T12:00:00.000000",
+    "uploaded_by": "HR Manager",
+    "uploader_role": "HR",
+    "document_type": "Training Document",
+    "classification_confidence": 89,
+    "summary": "Quarterly training schedule for Q1 2025 covering safety protocols, customer service excellence, emergency response, and new technology systems. 450 employees to be trained across 12 programs.",
+    "action_items": [
+      "Confirm training venue bookings",
+      "Distribute training materials to departments",
+      "Schedule trainer assessments",
+      "Setup online learning modules"
+    ],
+    "deadlines": [
+      "January 31, 2025",
+      "December 20, 2024"
+    ],
+    "risks": [
+      "Training budget constraints",
+      "Employee availability conflicts",
+      "Trainer resource shortage"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 567,
+      "characters": 3421,
+      "lines": 45
+    },
+    "key_information": {
+      "employees_count": "450",
+      "training_programs": "12",
+      "duration": "Q1 2025"
+    },
+    "file_path": "uploads/Employee_Training_Schedule_Q1_2025.pdf",
+    "tags": [
+      "training",
+      "hr",
+      "safety",
+      "customer service",
+      "q1 2025"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_004",
+    "filename": "Environmental_Impact_Assessment_Green_Line.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T13:30:00.000000",
+    "uploaded_by": "Environmental Officer",
+    "uploader_role": "Engineering",
+    "document_type": "Environmental Report",
+    "classification_confidence": 94,
+    "summary": "Environmental impact assessment for the proposed Green Line extension. Analysis covers air quality improvements, noise reduction measures, and biodiversity conservation. Project shows 35% reduction in carbon emissions.",
+    "action_items": [
+      "Submit EIA to environmental board",
+      "Conduct public consultation meetings",
+      "Implement mitigation measures",
+      "Setup environmental monitoring systems"
+    ],
+    "deadlines": [
+      "February 28, 2025",
+      "January 10, 2025"
+    ],
+    "risks": [
+      "Environmental clearance delays",
+      "Public opposition",
+      "Regulatory compliance issues"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 1156,
+      "characters": 6789,
+      "lines": 98
+    },
+    "key_information": {
+      "carbon_reduction": "35%",
+      "project_line": "Green Line",
+      "assessment_status": "Completed"
+    },
+    "file_path": "uploads/Environmental_Impact_Assessment_Green_Line.pdf",
+    "tags": [
+      "environmental",
+      "green line",
+      "assessment",
+      "sustainability",
+      "carbon reduction"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_005",
+    "filename": "Digital_Ticketing_Integration_Proposal.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T14:45:00.000000",
+    "uploaded_by": "IT Director",
+    "uploader_role": "IT",
+    "document_type": "Technology Proposal",
+    "classification_confidence": 91,
+    "summary": "Proposal for integrated digital ticketing system with mobile payments, QR codes, and real-time passenger analytics. System to support 500,000 daily transactions with 99.9% uptime guarantee.",
+    "action_items": [
+      "Evaluate vendor proposals",
+      "Conduct pilot testing at 3 stations",
+      "Train customer service staff",
+      "Develop mobile application features"
+    ],
+    "deadlines": [
+      "April 30, 2025",
+      "March 15, 2025"
+    ],
+    "risks": [
+      "System integration challenges",
+      "Cybersecurity vulnerabilities",
+      "User adoption resistance"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 723,
+      "characters": 4567,
+      "lines": 56
+    },
+    "key_information": {
+      "daily_transactions": "500,000",
+      "uptime_guarantee": "99.9%",
+      "pilot_stations": "3"
+    },
+    "file_path": "uploads/Digital_Ticketing_Integration_Proposal.pdf",
+    "tags": [
+      "digital",
+      "ticketing",
+      "mobile",
+      "technology",
+      "integration"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241202_006",
+    "filename": "Quarterly_Performance_Report_Q3_2024.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T15:20:00.000000",
+    "uploaded_by": "Operations Manager",
+    "uploader_role": "Operations",
+    "document_type": "Performance Report",
+    "classification_confidence": 88,
+    "summary": "Q3 2024 performance metrics showing 96.2% on-time performance, 2.1 million passengers served, and customer satisfaction score of 4.2/5. Energy consumption reduced by 8% compared to Q2.",
+    "action_items": [
+      "Address peak hour congestion issues",
+      "Improve customer feedback response time",
+      "Optimize energy consumption further",
+      "Plan capacity enhancement for Q4"
+    ],
+    "deadlines": [
+      "December 31, 2024",
+      "November 30, 2024"
+    ],
+    "risks": [
+      "Passenger volume growth exceeding capacity",
+      "Maintenance schedule conflicts",
+      "Weather-related service disruptions"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 645,
+      "characters": 3890,
+      "lines": 52
+    },
+    "key_information": {
+      "on_time_performance": "96.2%",
+      "passengers_served": "2.1 million",
+      "customer_satisfaction": "4.2/5",
+      "energy_savings": "8%"
+    },
+    "file_path": "uploads/Quarterly_Performance_Report_Q3_2024.pdf",
+    "tags": [
+      "performance",
+      "quarterly",
+      "operations",
+      "metrics",
+      "q3 2024"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_001",
+    "filename": "Emergency_Response_Protocol_Update.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T16:30:00.000000",
+    "uploaded_by": "Emergency Response Coordinator",
+    "uploader_role": "Operations",
+    "document_type": "Emergency Protocol",
+    "classification_confidence": 97,
+    "summary": "Updated emergency response protocols for medical emergencies, power failures, and security incidents. New 3-minute response time standard for all stations. Includes coordination with local emergency services.",
+    "action_items": [
+      "Train all station staff on new protocols",
+      "Update emergency contact directories",
+      "Install additional emergency communication equipment",
+      "Conduct monthly emergency response drills"
+    ],
+    "deadlines": [
+      "January 31, 2025",
+      "December 20, 2024"
+    ],
+    "risks": [
+      "Delayed emergency response",
+      "Staff protocol confusion",
+      "Communication system failures"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 834,
+      "characters": 5127,
+      "lines": 72
+    },
+    "key_information": {
+      "response_time": "3 minutes",
+      "protocol_version": "2.1",
+      "coverage": "All stations"
+    },
+    "file_path": "uploads/Emergency_Response_Protocol_Update.pdf",
+    "tags": [
+      "emergency",
+      "protocol",
+      "response",
+      "safety",
+      "medical"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_002",
+    "filename": "Vendor_Contract_Cleaning_Services_2025.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T17:15:00.000000",
+    "uploaded_by": "Procurement Manager",
+    "uploader_role": "Finance",
+    "document_type": "Contract",
+    "classification_confidence": 92,
+    "summary": "Annual cleaning services contract for 2025. Covers all metro stations, depots, and office buildings. Contract value: ₹1.2 crores with performance-based incentives. Includes eco-friendly cleaning standards.",
+    "action_items": [
+      "Review contractor performance metrics",
+      "Finalize contract terms and conditions",
+      "Setup quality monitoring systems",
+      "Establish monthly review meetings"
+    ],
+    "deadlines": [
+      "December 31, 2024",
+      "November 25, 2024"
+    ],
+    "risks": [
+      "Service quality degradation",
+      "Contract cost escalation",
+      "Vendor reliability issues"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 567,
+      "characters": 3421,
+      "lines": 48
+    },
+    "key_information": {
+      "contract_value": "₹1.2 crores",
+      "duration": "12 months",
+      "locations": "All stations + depots"
+    },
+    "file_path": "uploads/Vendor_Contract_Cleaning_Services_2025.pdf",
+    "tags": [
+      "contract",
+      "cleaning",
+      "vendor",
+      "procurement",
+      "maintenance"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_003",
+    "filename": "Passenger_Feedback_Analysis_Nov2024.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T18:00:00.000000",
+    "uploaded_by": "Customer Relations Manager",
+    "uploader_role": "Operations",
+    "document_type": "Analysis Report",
+    "classification_confidence": 89,
+    "summary": "Monthly passenger feedback analysis showing 4.3/5 satisfaction rating. Top complaints: peak hour crowding (34%), air conditioning (22%), and announcement clarity (18%). Positive feedback on cleanliness and staff courtesy.",
+    "action_items": [
+      "Increase train frequency during peak hours",
+      "Service AC systems at identified stations",
+      "Upgrade public announcement systems",
+      "Implement crowd management strategies"
+    ],
+    "deadlines": [
+      "February 15, 2025",
+      "January 30, 2025"
+    ],
+    "risks": [
+      "Declining passenger satisfaction",
+      "Negative public perception",
+      "Revenue impact from service issues"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 712,
+      "characters": 4289,
+      "lines": 61
+    },
+    "key_information": {
+      "satisfaction_rating": "4.3/5",
+      "total_feedback": "1,847 responses",
+      "top_complaint": "Peak hour crowding (34%)"
+    },
+    "file_path": "uploads/Passenger_Feedback_Analysis_Nov2024.pdf",
+    "tags": [
+      "feedback",
+      "passenger",
+      "satisfaction",
+      "analysis",
+      "customer service"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_004",
+    "filename": "IT_Security_Audit_Recommendations.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T19:30:00.000000",
+    "uploaded_by": "IT Security Officer",
+    "uploader_role": "IT",
+    "document_type": "Security Audit",
+    "classification_confidence": 95,
+    "summary": "Comprehensive IT security audit revealing 12 critical vulnerabilities and 28 medium-risk issues. Recommendations include multi-factor authentication, endpoint security updates, and staff cybersecurity training.",
+    "action_items": [
+      "Implement multi-factor authentication system-wide",
+      "Update all endpoint security software",
+      "Conduct mandatory cybersecurity training",
+      "Establish 24/7 security monitoring center"
+    ],
+    "deadlines": [
+      "January 15, 2025",
+      "December 31, 2024"
+    ],
+    "risks": [
+      "Cybersecurity breaches",
+      "Data theft or corruption",
+      "System downtime",
+      "Regulatory compliance violations"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 945,
+      "characters": 5672,
+      "lines": 89
+    },
+    "key_information": {
+      "critical_vulnerabilities": "12",
+      "medium_risk_issues": "28",
+      "compliance_score": "73%"
+    },
+    "file_path": "uploads/IT_Security_Audit_Recommendations.pdf",
+    "tags": [
+      "security",
+      "audit",
+      "cybersecurity",
+      "vulnerabilities",
+      "compliance"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_005",
+    "filename": "New_Metro_Line_Phase2_Blueprint.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T20:15:00.000000",
+    "uploaded_by": "Chief Engineer",
+    "uploader_role": "Engineering",
+    "document_type": "Technical Blueprint",
+    "classification_confidence": 96,
+    "summary": "Detailed engineering blueprint for Metro Line Phase 2 expansion covering 18.5 km with 12 new stations. Project timeline: 36 months, estimated cost: ₹4,200 crores. Includes elevated and underground sections.",
+    "action_items": [
+      "Finalize land acquisition procedures",
+      "Submit environmental impact assessment",
+      "Initiate contractor bidding process",
+      "Setup project monitoring dashboard"
+    ],
+    "deadlines": [
+      "March 31, 2025",
+      "February 28, 2025"
+    ],
+    "risks": [
+      "Land acquisition delays",
+      "Environmental clearance issues",
+      "Cost overruns",
+      "Construction timeline delays"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 1234,
+      "characters": 7456,
+      "lines": 156
+    },
+    "key_information": {
+      "length": "18.5 km",
+      "stations": "12 new stations",
+      "cost": "₹4,200 crores",
+      "timeline": "36 months"
+    },
+    "file_path": "uploads/New_Metro_Line_Phase2_Blueprint.pdf",
+    "tags": [
+      "blueprint",
+      "expansion",
+      "phase 2",
+      "engineering",
+      "construction"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_006",
+    "filename": "Staff_Wellness_Program_Initiative.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T21:00:00.000000",
+    "uploaded_by": "HR Director",
+    "uploader_role": "HR",
+    "document_type": "HR Policy",
+    "classification_confidence": 88,
+    "summary": "Comprehensive staff wellness program including health insurance upgrades, mental health support, fitness facilities, and work-life balance initiatives. Program budget: ₹50 lakhs annually for 1,200 employees.",
+    "action_items": [
+      "Partner with healthcare providers",
+      "Setup on-site fitness facilities",
+      "Launch mental health awareness programs",
+      "Implement flexible working arrangements"
+    ],
+    "deadlines": [
+      "April 30, 2025",
+      "March 15, 2025"
+    ],
+    "risks": [
+      "Low employee participation",
+      "Budget constraints",
+      "Provider service quality issues"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 623,
+      "characters": 3789,
+      "lines": 52
+    },
+    "key_information": {
+      "budget": "₹50 lakhs annually",
+      "employees_covered": "1,200",
+      "program_components": "4 major initiatives"
+    },
+    "file_path": "uploads/Staff_Wellness_Program_Initiative.pdf",
+    "tags": [
+      "wellness",
+      "hr",
+      "health",
+      "employee",
+      "benefits"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_007",
+    "filename": "Energy_Efficiency_Solar_Panel_Project.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T22:30:00.000000",
+    "uploaded_by": "Sustainability Manager",
+    "uploader_role": "Engineering",
+    "document_type": "Project Proposal",
+    "classification_confidence": 93,
+    "summary": "Solar panel installation project for 15 metro stations and 2 depots. Projected 40% reduction in electricity costs, 2,500 tons CO2 savings annually. ROI expected in 6.5 years with 25-year system lifespan.",
+    "action_items": [
+      "Complete rooftop structural assessments",
+      "Finalize solar panel vendor selection",
+      "Obtain grid-tie permissions from KSEB",
+      "Setup energy monitoring systems"
+    ],
+    "deadlines": [
+      "May 31, 2025",
+      "April 15, 2025"
+    ],
+    "risks": [
+      "Weather-related installation delays",
+      "Grid integration complications",
+      "Technology obsolescence",
+      "Maintenance cost escalation"
+    ],
+    "priority": "Medium",
+    "language": "en",
+    "text_stats": {
+      "words": 789,
+      "characters": 4756,
+      "lines": 68
+    },
+    "key_information": {
+      "cost_reduction": "40%",
+      "co2_savings": "2,500 tons annually",
+      "roi_period": "6.5 years",
+      "locations": "15 stations + 2 depots"
+    },
+    "file_path": "uploads/Energy_Efficiency_Solar_Panel_Project.pdf",
+    "tags": [
+      "solar",
+      "energy",
+      "sustainability",
+      "environment",
+      "cost savings"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "DOC_20241203_008",
+    "filename": "Annual_Maintenance_Schedule_Rolling_Stock.pdf",
+    "file_type": "application/pdf",
+    "upload_date": "2025-09-16T23:00:00.000000",
+    "uploaded_by": "Maintenance Supervisor",
+    "uploader_role": "Operations",
+    "document_type": "Maintenance Schedule",
+    "classification_confidence": 91,
+    "summary": "Comprehensive annual maintenance schedule for 48 train sets. Includes daily inspections, monthly overhauls, and annual safety certifications. Zero-incident target with 99.5% availability goal.",
+    "action_items": [
+      "Schedule preventive maintenance windows",
+      "Order spare parts inventory",
+      "Coordinate with operations for service disruptions",
+      "Train maintenance technicians on new procedures"
+    ],
+    "deadlines": [
+      "Ongoing - Daily",
+      "December 31, 2024"
+    ],
+    "risks": [
+      "Unplanned service disruptions",
+      "Spare parts shortage",
+      "Technician skill gaps",
+      "Safety compliance issues"
+    ],
+    "priority": "High",
+    "language": "en",
+    "text_stats": {
+      "words": 678,
+      "characters": 4123,
+      "lines": 59
+    },
+    "key_information": {
+      "train_sets": "48",
+      "availability_target": "99.5%",
+      "incident_target": "Zero",
+      "maintenance_types": "Daily, Monthly, Annual"
+    },
+    "file_path": "uploads/Annual_Maintenance_Schedule_Rolling_Stock.pdf",
+    "tags": [
+      "maintenance",
+      "rolling stock",
+      "trains",
+      "schedule",
+      "safety"
+    ],
+    "status": "Active"
+  }
+]

@@ -1,0 +1,478 @@
+"""
+KochiMetro DocuTrack - Main Application
+A comprehensive document management system for KMRL with OCR, classification, and role-based access
+"""
+import streamlit as st
+import sys
+from config import DATA_DIR, UPLOAD_DIR, SAMPLE_USERS
+from modules.auth_manager import AuthManager
+from modules import database
+from pages import dashboard, upload
+import plotly.express as px
+
+# App branding
+LOGO_PATH = "uploads/carhire.pdf"  # Replace with your logo path or image
+APP_NAME = "MetroVivaram"
+
+# Material U CSS styles
+login_card_css = '''
+<style>
+.material-login-card {
+max-width: 370px;
+margin: 7vh auto 0 auto;
+background: var(--material-surface);
+border-radius: var(--material-radius);
+box-shadow: var(--material-elevation);
+padding: 2.5rem 2rem 2rem 2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.material-login-title {
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--material-primary);
+margin-bottom: 0.5em;
+text-align: center;
+letter-spacing: 0.5px;
+}
+.material-login-desc {
+color: #625B71;
+font-size: 1.05rem;
+margin-bottom: 1.5em;
+text-align: center;
+}
+.material-login-form label {
+font-weight: 500;
+color: var(--material-primary);
+margin-bottom: 0.2em;
+}
+.material-login-form input {
+width: 100%;
+margin-bottom: 1.2em;
+}
+.material-login-btn button {
+width: 100%;
+font-size: 1.1rem;
+margin-top: 0.5em;
+}
+</style>
+<div class="material-login-card">
+<div class="material-login-title">MetroVivaram</div>
+<div class="material-login-desc">Intelligent Document Management System for KMRL</div>
+<div id="login-form-anchor"></div>
+</div>
+'''
+
+login_card_js = '''
+<script>
+const anchor = window.parent.document.getElementById('login-form-anchor');
+if (anchor) anchor.scrollIntoView({behavior: 'smooth'});
+</script>
+'''
+
+responsive_css = '''
+<style>
+@media (max-width: 600px) {
+    .main-header, .stApp, .block-container, .stSidebar {
+        padding: 0.5em !important;
+        font-size: 1.05rem !important;
+    }
+    .stButton>button, .stTextInput>div>input {
+        font-size: 1.1rem !important;
+    }
+    .stSidebar {
+        width: 100vw !important;
+    }
+}
+</style>
+'''
+
+# Inject global dark Material U theme CSS
+st.markdown(
+    """
+    <style>
+    :root {
+        --material-primary: #BB86FC;
+        --material-on-primary: #1C1B1F;
+        --material-secondary: #03DAC6;
+        --material-background: #181A20;
+        --material-surface: #23242B;
+        --material-surface-variant: #292B32;
+        --material-outline: #79747E;
+        --material-error: #CF6679;
+        --material-radius: 20px;
+        --material-elevation: 0 2px 8px 0 rgba(187,134,252,0.10);
+        --material-font: 'Google Sans', 'Roboto', 'Arial', sans-serif;
+    }
+    html, body, [data-testid="stAppViewContainer"] {
+        background: var(--material-background) !important;
+        font-family: var(--material-font) !important;
+        color: #FFFFFF !important;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    .stApp {
+        background: var(--material-background) !important;
+        padding: 0.5rem 0.5rem 2.5rem 0.5rem !important;
+        color: #FFFFFF !important;
+    }
+    /* Improve text visibility */
+    .stMarkdown, .stText, p, span, div {
+        color: #FFFFFF !important;
+    }
+    .stDataFrame {
+        background: var(--material-surface) !important;
+        border-radius: var(--material-radius) !important;
+    }
+    .stDataFrame table {
+        background: var(--material-surface) !important;
+        color: #FFFFFF !important;
+    }
+    .stDataFrame th {
+        background: var(--material-surface-variant) !important;
+        color: var(--material-primary) !important;
+        font-weight: 600 !important;
+    }
+    .stDataFrame td {
+        background: var(--material-surface) !important;
+        color: #FFFFFF !important;
+        border-color: var(--material-outline) !important;
+    }
+    /* Card, Inputs, Headings, Responsive, etc. */
+    .stCard[style*='color:#B3261E'] { background: var(--material-surface) !important; color: #FFFFFF !important; }
+    .stCard[style*='color:#006B57'] { background: var(--material-surface) !important; color: #FFFFFF !important; }
+    .stCard {
+        background: var(--material-surface) !important;
+        border-radius: var(--material-radius) !important;
+        padding: 1.5rem !important;
+        box-shadow: var(--material-elevation) !important;
+        border: 1px solid var(--material-outline) !important;
+        color: #FFFFFF !important;
+    }
+    input, textarea, select {
+        border-radius: 12px !important;
+        border: 1.5px solid var(--material-outline) !important;
+        background: var(--material-surface-variant) !important;
+        font-size: 1rem;
+        padding: 0.7rem 1rem !important;
+        margin-bottom: 1rem;
+        color: #FFFFFF !important;
+        outline: 2px solid transparent;
+    }
+    input:focus, textarea:focus, select:focus {
+        text-shadow: none !important;
+        outline: 2px solid var(--material-primary);
+        outline-offset: 2px;
+        background: var(--material-surface) !important;
+        color: #FFFFFF !important;
+    }
+    /* Improve button visibility */
+    .stButton > button {
+        background: var(--material-primary) !important;
+        color: var(--material-on-primary) !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 0.7rem 1.5rem !important;
+        font-weight: 600 !important;
+        box-shadow: var(--material-elevation) !important;
+    }
+    .stButton > button:hover {
+        background: #A374E8 !important;
+        box-shadow: 0 4px 12px 0 rgba(187,134,252,0.25) !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--material-font) !important;
+        font-weight: 700;
+        color: var(--material-primary);
+        letter-spacing: -0.5px;
+    }
+    /* Improve sidebar styling */
+    .css-1d391kg, .css-1lcbmhc {
+        background: var(--material-surface) !important;
+        border-right: 1px solid var(--material-outline) !important;
+    }
+    .css-1d391kg .stRadio > label, .css-1lcbmhc .stRadio > label {
+        color: #FFFFFF !important;
+        font-weight: 500 !important;
+    }
+    .css-1d391kg .stRadio > label:hover, .css-1lcbmhc .stRadio > label:hover {
+        background: var(--material-surface-variant) !important;
+        border-radius: 8px !important;
+    }
+    /* Improve metrics and info styling */
+    .stMetric {
+        background: var(--material-surface) !important;
+        border-radius: var(--material-radius) !important;
+        padding: 1rem !important;
+        border: 1px solid var(--material-outline) !important;
+    }
+    .stMetric > div {
+        color: #FFFFFF !important;
+    }
+    .stAlert {
+        background: var(--material-surface) !important;
+        border: 1px solid var(--material-outline) !important;
+        border-radius: var(--material-radius) !important;
+        color: #FFFFFF !important;
+    }
+    .stInfo {
+        background: var(--material-surface-variant) !important;
+        border-left: 4px solid var(--material-secondary) !important;
+        color: #FFFFFF !important;
+    }
+    .stSuccess {
+        background: var(--material-surface-variant) !important;
+        border-left: 4px solid #4CAF50 !important;
+        color: #FFFFFF !important;
+    }
+    .stError {
+        background: var(--material-surface-variant) !important;
+        border-left: 4px solid var(--material-error) !important;
+        color: #FFFFFF !important;
+    }
+    @media (max-width: 900px) {
+        section[data-testid="stSidebar"] {
+            margin: 0.5rem 0.2rem;
+            padding: 1rem 0.5rem;
+            min-width: 120px;
+            max-width: 100vw;
+        }
+        .stApp {
+            padding: 0.2rem 0.2rem 2.5rem 0.2rem !important;
+        }
+        .stCard {
+            padding: 0.7rem !important;
+        }
+    }
+    @media (max-width: 600px) {
+        .stApp {
+            padding: 0.1rem 0.1rem 2.5rem 0.1rem !important;
+        }
+        h1, h2, h3 {
+            font-size: 1.2rem !important;
+        }
+        .stCard {
+            font-size: 0.98rem !important;
+        }
+        section[data-testid="stSidebar"] {
+            padding: 0.5rem 0.2rem;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# --- Audit Log Page (Material U style) ---
+def show_audit_page(user_info=None):
+    st.markdown("""
+    <div class="main-header" style="background: var(--material-surface); padding: 1.5rem; border-radius: var(--material-radius); margin-bottom: 1rem; border: 1px solid var(--material-outline);">
+        <h2 style="color: var(--material-primary); margin-bottom: 0.5rem;">📝 Audit Log</h2>
+        <p style="color: #FFFFFF; margin: 0;">Recent user activity and document access logs</p>
+    </div>
+    """, unsafe_allow_html=True)
+    db = database.DocumentDatabase()
+    audit_log = db.get_audit_log(limit=100)
+    if audit_log:
+        table = []
+        for e in reversed(audit_log):
+            table.append({
+                'Action': e.get('action', ''),
+                'User': e.get('user_name', ''),
+                'Role': e.get('user_role', ''),
+                'Doc ID': e.get('document_id', 'N/A'),
+                'Details': e.get('details', '')
+            })
+        st.dataframe(table, use_container_width=True, hide_index=True)
+    else:
+        st.info("No log entries found.")
+
+def show_analytics_page(user_info):
+    """Enhanced analytics and statistics page"""
+    st.markdown("""
+    <div class="main-header" style="background: var(--material-surface); padding: 1.5rem; border-radius: var(--material-radius); margin-bottom: 1rem; border: 1px solid var(--material-outline);">
+        <h2 style="color: var(--material-primary); margin-bottom: 0.5rem;">📊 Analytics Dashboard</h2>
+        <p style="color: #FFFFFF; margin: 0;">Comprehensive insights and document statistics</p>
+    </div>
+    """, unsafe_allow_html=True)
+    db = database.DocumentDatabase()
+    stats = db.get_statistics()
+    # Enhanced metrics display
+    st.subheader("📈 System Overview")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("📚 Total Documents", stats['total_documents'], delta=None)
+    with col2:
+        st.metric("📂 Document Types", len(stats['documents_by_type']), delta=None)
+    with col3:
+        st.metric("📅 Recent Uploads", stats['recent_uploads'], delta=None)
+    with col4:
+        high_priority = stats['documents_by_priority'].get('High', 0)
+        st.metric("⚠️ High Priority", high_priority, delta=None)
+    if stats['total_documents'] > 0:
+        col1, col2 = st.columns(2)
+        with col1:
+            st.subheader("📊 Document Types Distribution")
+            type_data = stats['documents_by_type']
+            if type_data:
+                fig = px.bar(
+                    x=list(type_data.keys()),
+                    y=list(type_data.values()),
+                    title="Documents by Type",
+                    color=list(type_data.values()),
+                    color_continuous_scale="Blues"
+                )
+                fig.update_layout(
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        with col2:
+            st.subheader("⚠️ Priority Breakdown")
+            priority_data = stats['documents_by_priority']
+            if priority_data:
+                colors = {'High': '#ff4444', 'Medium': '#ffaa00', 'Low': '#44ff44'}
+                fig = px.pie(
+                    values=list(priority_data.values()),
+                    names=list(priority_data.keys()),
+                    title="Priority Distribution",
+                    color=list(priority_data.keys()),
+                    color_discrete_map=colors
+                )
+                fig.update_layout(
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    paper_bgcolor='rgba(0,0,0,0)',
+                )
+                st.plotly_chart(fig, use_container_width=True)
+
+def show_demo_access_screen():
+    """Demo access control screen"""
+    st.markdown("""
+        <style>
+        .demo-access-card {
+            max-width: 400px;
+            margin: 10vh auto 0 auto;
+            background: var(--material-surface);
+            border-radius: var(--material-radius);
+            box-shadow: var(--material-elevation);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .demo-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--material-primary);
+            margin-bottom: 1rem;
+        }
+        .demo-subtitle {
+            color: #625B71;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        </style>
+        <div class="demo-access-card">
+            <div class="demo-title">🚀 MetroVivaram Demo</div>
+            <div class="demo-subtitle">Enter the demo access code to continue</div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    with st.form("demo_access_form"):
+        access_code = st.text_input("Demo Access Code", type="password", placeholder="Enter access code...")
+        submit = st.form_submit_button("Access Demo", use_container_width=True)
+        
+        if submit:
+            # Change this to your preferred demo access code
+            if access_code == "METRO2025":
+                st.session_state.demo_access_granted = True
+                st.success("✅ Access granted! Redirecting...")
+                st.rerun()
+            else:
+                st.error("❌ Invalid access code. Please contact the demo organizer.")
+    
+    st.markdown("""
+        <div style="text-align: center; margin-top: 2rem; color: #625B71; font-size: 0.9rem;">
+            <p>This is a demonstration of KMRL's Document Management System</p>
+            <p>Contact: <a href="mailto:demo@metrovivaram.com" style="color: var(--material-primary);">demo@metrovivaram.com</a></p>
+        </div>
+    """, unsafe_allow_html=True)
+
+def main():
+    try:
+        # Demo access control - uncomment to enable
+        if 'demo_access_granted' not in st.session_state:
+            st.session_state.demo_access_granted = False
+        
+        # Demo access screen (enable this for controlled demo access)
+        # if not st.session_state.demo_access_granted:
+        #     show_demo_access_screen()
+        #     return
+        
+        auth_manager = AuthManager()
+        
+        # Material U Login Page
+        if not auth_manager.is_authenticated():
+            st.markdown(login_card_css, unsafe_allow_html=True)
+            st.markdown(login_card_js, unsafe_allow_html=True)
+            
+            # Use a container to keep form inside the card
+            with st.container():
+                st.markdown('<div class="material-login-form">', unsafe_allow_html=True)
+                auth_manager.login_form()
+                st.markdown('</div>', unsafe_allow_html=True)
+            return
+        
+        # Get current user
+        user_info = auth_manager.get_current_user()
+        
+        # Responsive CSS for mobile-friendliness
+        st.markdown(responsive_css, unsafe_allow_html=True)
+        
+        # Google Material Design inspired sidebar navigation
+        with st.sidebar:
+            st.markdown(f"""
+                <div style='padding:0.5em 0 1.5em 0;'>
+                    <span style='font-size:1.3rem;font-weight:600;color:#BB86FC;'>{user_info['name']}</span><br>
+                    <span style='font-size:0.95rem;color:#FFFFFF;'>{user_info['role']}</span>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            page = st.radio(
+                "",
+                ["Dashboard", "Upload", "Audit Log"],
+                key="navigation",
+                label_visibility="collapsed",
+                horizontal=False,
+            )
+            
+            st.markdown(
+                "<hr style='margin:1.5em 0 1em 0;border:0;border-top:1px solid #79747E;'>",
+                unsafe_allow_html=True,
+            )
+            
+            # Prominent Logout Button
+            if st.button("Logout", key="logout_btn", help="Sign out of your account"):
+                auth_manager.logout()
+        
+        # PWA install prompt banner (informational)
+        st.markdown("""
+            <div style='position:fixed;bottom:0;left:0;width:100vw;background:var(--material-primary);color:#1C1B1F;padding:0.7em 1em;text-align:center;z-index:9999;font-weight:600;'>
+                <b>💡 Tip:</b> For a better experience, add MetroVivaram to your home screen or install as a PWA from your browser menu.
+            </div>
+        """, unsafe_allow_html=True)
+        
+        # Main content area
+        if page == "Dashboard":
+            dashboard.show_dashboard_page(user_info)
+        elif page == "Upload":
+            upload.show_upload_page(user_info)
+        elif page == "Audit Log":
+            show_audit_page(user_info)
+            
+    except Exception as e:
+        st.error(f"Application error: {str(e)}")
+        st.info("Please refresh the page to restart the application.")
+
+if __name__ == "__main__":
+    main()
