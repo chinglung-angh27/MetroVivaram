@@ -12,6 +12,40 @@ from langdetect import detect, LangDetectException
 import logging
 import re
 from typing import Dict, List, Tuple, Optional
+import subprocess
+import shutil
+
+# Check for Tesseract availability
+def check_tesseract():
+    """Check if Tesseract is available on the system"""
+    try:
+        # Try to find tesseract executable
+        tesseract_cmd = shutil.which('tesseract')
+        if tesseract_cmd:
+            return True, tesseract_cmd
+        
+        # Try common installation paths
+        common_paths = [
+            '/usr/bin/tesseract',
+            '/usr/local/bin/tesseract',
+            '/opt/homebrew/bin/tesseract',
+            'C:\\Program Files\\Tesseract-OCR\\tesseract.exe',
+            'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+        ]
+        
+        for path in common_paths:
+            if shutil.which(path):
+                return True, path
+                
+        return False, None
+    except Exception:
+        return False, None
+
+TESSERACT_AVAILABLE, TESSERACT_PATH = check_tesseract()
+
+# Configure pytesseract if available
+if TESSERACT_AVAILABLE and TESSERACT_PATH:
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
 # Optional OpenCV import for enhanced image preprocessing
 try:
@@ -32,9 +66,11 @@ class AdvancedOCRProcessor:
         }
         self.logger = logging.getLogger(__name__)
         
-        # Show OpenCV status on first initialization
+        # Show system status on initialization
         if not CV2_AVAILABLE:
             self.logger.info("OpenCV not available - using PIL-based image preprocessing")
+        if not TESSERACT_AVAILABLE:
+            self.logger.warning("Tesseract OCR not available - OCR functionality will be limited")
         
     def detect_content_language(self, text: str) -> Dict[str, any]:
         """
@@ -167,6 +203,18 @@ class AdvancedOCRProcessor:
         Extract text from image using OCR with automatic language detection
         """
         try:
+            # Check if Tesseract is available
+            if not TESSERACT_AVAILABLE:
+                return {
+                    'text': '',
+                    'language_analysis': self.detect_content_language(''),
+                    'ocr_language': 'unavailable',
+                    'confidence': 0.0,
+                    'text_stats': self.get_text_stats(''),
+                    'extraction_method': 'tesseract_unavailable',
+                    'error': 'Tesseract OCR is not available on this system. Please install Tesseract for OCR functionality.'
+                }
+            
             # Load and preprocess image
             image = Image.open(image_file)
             processed_image = self.preprocess_image(image)

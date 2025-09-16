@@ -1,0 +1,5 @@
+tesseract-ocr
+tesseract-ocr-eng
+tesseract-ocr-mal
+tesseract-ocr-script-latn
+tesseract-ocr-script-mlym

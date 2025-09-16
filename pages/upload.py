@@ -25,10 +25,23 @@ def show_upload_page(user_info):
     db = DocumentDatabase()
     summarizer = None  # Initialize only if needed
 
+    # Check OCR availability and show status
+    from modules.ocr_processor import TESSERACT_AVAILABLE
+    if not TESSERACT_AVAILABLE:
+        st.warning("""
+        ⚠️ **OCR Functionality Limited**: Tesseract OCR is not available on this system.
+        
+        - ✅ **Text-based PDFs**: Can still extract text directly
+        - ❌ **Images & Scanned PDFs**: OCR processing unavailable
+        - 📄 **Recommendation**: Use text-based documents for best results
+        
+        *This is common on cloud platforms. The app works with text-extractable documents.*
+        """)
+
     # OCR Settings
     st.markdown("""
     <div class='stCard' style='background:var(--material-surface-variant);padding:1.5rem;margin-bottom:1.5rem;'>
-        <h3 style='color:var(--material-primary);margin-bottom:1rem;'>🔍 OCR Configuration</h3>
+        <h3 style='color:var(--material-primary);margin-bottom:1rem;'>🔍 Document Processing</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -37,11 +50,13 @@ def show_upload_page(user_info):
         auto_detect_language = st.checkbox(
             "🌐 Auto-detect language (English/Malayalam/Hybrid)", 
             value=True,
-            help="Automatically detect and optimize OCR for English, Malayalam, or mixed content"
+            disabled=not TESSERACT_AVAILABLE,
+            help="Automatically detect and optimize OCR for English, Malayalam, or mixed content" + 
+                 ("" if TESSERACT_AVAILABLE else " (Requires Tesseract OCR)")
         )
     with col2:
         show_ocr_details = st.checkbox(
-            "📊 Show detailed OCR analysis", 
+            "📊 Show detailed processing analysis", 
             value=True,
             help="Display language analysis, confidence scores, and processing details"
         )
