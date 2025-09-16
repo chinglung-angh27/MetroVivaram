@@ -236,9 +236,36 @@ def get_theme_css(user_role=None):
     .stSidebar {{
         background: var(--material-surface) !important;
         font-family: var(--material-font) !important;
+        border-right: 1px solid var(--material-outline) !important;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1) !important;
+        position: relative !important;
+        min-height: 100vh !important;
     }}
     .stSidebar .stRadio > label {{
         color: #FFFFFF !important;
+    }}
+    /* Enhanced button styling for navigation */
+    .stSidebar .stButton > button {{
+        background: transparent !important;
+        color: #FFFFFF !important;
+        border: 1px solid transparent !important;
+        border-radius: 12px !important;
+        font-weight: 500 !important;
+        padding: 0.75rem 1rem !important;
+        text-align: left !important;
+        transition: all 0.2s ease !important;
+        margin-bottom: 0.3rem !important;
+    }}
+    .stSidebar .stButton > button:hover {{
+        background: var(--material-surface-variant) !important;
+        border-color: var(--material-outline) !important;
+        transform: translateX(2px) !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+    }}
+    .stSidebar .stButton > button:focus {{
+        background: var(--material-primary) !important;
+        color: var(--material-on-primary) !important;
+        border-color: var(--material-primary) !important;
     }}
     .stSelectbox > div {{
         background: var(--material-surface) !important;
@@ -294,6 +321,16 @@ def get_theme_css(user_role=None):
         .stCard {{
             padding: 0.7rem !important;
         }}
+        /* Mobile navigation adjustments */
+        .nav-item {{
+            padding: 10px 12px !important;
+            font-size: 0.9rem !important;
+        }}
+        .nav-icon {{
+            margin-right: 8px !important;
+            font-size: 1.1rem !important;
+        }}
+    }}
     }}
     @media (max-width: 600px) {{
         .stApp {{
@@ -488,36 +525,203 @@ def main():
         # Responsive CSS for mobile-friendliness
         st.markdown(responsive_css, unsafe_allow_html=True)
         
-        # Google Material Design inspired sidebar navigation
+        # Modern Material U Navigation Sidebar
         with st.sidebar:
+            # User Profile Card
             st.markdown(f"""
-                <div style='padding:0.5em 0 1.5em 0;'>
-                    <span style='font-size:1.3rem;font-weight:600;color:var(--material-primary);'>{user_info['name']}</span><br>
-                    <span style='font-size:0.95rem;color:#FFFFFF;'>{user_info['role']}</span>
+                <div style='
+                    background: var(--material-surface-variant);
+                    border-radius: 16px;
+                    padding: 1.2rem;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid var(--material-outline);
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+                '>
+                    <div style='display: flex; align-items: center; margin-bottom: 0.8rem;'>
+                        <div style='
+                            background: var(--material-primary);
+                            color: var(--material-on-primary);
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                            margin-right: 0.8rem;
+                        '>
+                            {user_info['name'][0].upper()}
+                        </div>
+                        <div>
+                            <div style='font-size:1.1rem; font-weight:600; color:#FFFFFF; margin-bottom:0.2rem;'>
+                                {user_info['name']}
+                            </div>
+                            <div style='font-size:0.85rem; color:var(--material-primary); font-weight:500;'>
+                                {user_info['role']}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             """, unsafe_allow_html=True)
             
-            page = st.radio(
-                "",
-                ["Dashboard", "Upload", "Audit Log"],
-                key="navigation",
-                label_visibility="collapsed",
-                horizontal=False,
-            )
+            # Navigation Menu with Material U styling
+            st.markdown("""
+                <style>
+                .nav-item {
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 16px;
+                    margin: 4px 0;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    font-size: 0.95rem;
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                }
+                .nav-item:hover {
+                    background: var(--material-surface-variant);
+                    transform: translateX(4px);
+                }
+                .nav-item.active {
+                    background: var(--material-primary);
+                    color: var(--material-on-primary);
+                    font-weight: 600;
+                }
+                .nav-icon {
+                    margin-right: 12px;
+                    font-size: 1.2rem;
+                    width: 24px;
+                    text-align: center;
+                }
+                .nav-container {
+                    margin-bottom: 1.5rem;
+                }
+                </style>
+            """, unsafe_allow_html=True)
             
-            st.markdown(
-                "<hr style='margin:1.5em 0 1em 0;border:0;border-top:1px solid #79747E;'>",
-                unsafe_allow_html=True,
-            )
+            # Initialize session state for navigation
+            if 'current_page' not in st.session_state:
+                st.session_state.current_page = "Dashboard"
             
-            # Prominent Logout Button
-            if st.button("Logout", key="logout_btn", help="Sign out of your account"):
+            # Navigation items with icons
+            nav_items = [
+                {"name": "Dashboard", "icon": "📊", "label": "Dashboard"},
+                {"name": "Upload", "icon": "📤", "label": "Upload Documents"},
+                {"name": "Audit Log", "icon": "📝", "label": "Audit Log"}
+            ]
+            
+            st.markdown('<div class="nav-container">', unsafe_allow_html=True)
+            
+            for item in nav_items:
+                active_class = "active" if st.session_state.current_page == item["name"] else ""
+                
+                if st.button(
+                    f"{item['icon']} {item['label']}", 
+                    key=f"nav_{item['name']}", 
+                    help=f"Navigate to {item['label']}",
+                    use_container_width=True
+                ):
+                    st.session_state.current_page = item["name"]
+                    st.rerun()
+            
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Divider
+            st.markdown("""
+                <div style='
+                    height: 1px;
+                    background: linear-gradient(90deg, transparent, var(--material-outline), transparent);
+                    margin: 1.5rem 0;
+                '>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            # Enhanced Logout Button
+            st.markdown("""
+                <style>
+                .logout-btn {
+                    background: linear-gradient(135deg, #ff4444, #cc3333) !important;
+                    color: white !important;
+                    border: none !important;
+                    border-radius: 12px !important;
+                    padding: 12px 20px !important;
+                    font-weight: 600 !important;
+                    font-size: 0.95rem !important;
+                    width: 100% !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    transition: all 0.2s ease !important;
+                    box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3) !important;
+                }
+                .logout-btn:hover {
+                    transform: translateY(-2px) !important;
+                    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4) !important;
+                    background: linear-gradient(135deg, #ff5555, #dd4444) !important;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+            
+            if st.button("🚪 Logout", key="logout_btn", help="Sign out of your account", use_container_width=True):
                 auth_manager.logout()
+            
+            # Set the page variable based on session state
+            page = st.session_state.current_page
         
         # PWA install prompt banner (informational)
         st.markdown("""
             <div style='position:fixed;bottom:0;left:0;width:100vw;background:var(--material-primary);color:#1C1B1F;padding:0.7em 1em;text-align:center;z-index:9999;font-weight:600;'>
                 <b>💡 Tip:</b> For a better experience, add MetroVivaram to your home screen or install as a PWA from your browser menu.
+            </div>
+        """, unsafe_allow_html=True)
+        
+        # Breadcrumb Navigation
+        page_icons = {
+            "Dashboard": "📊",
+            "Upload": "📤", 
+            "Audit Log": "📝"
+        }
+        
+        st.markdown(f"""
+            <div style='
+                background: var(--material-surface);
+                border-radius: 12px;
+                padding: 0.8rem 1.2rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid var(--material-outline);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            '>
+                <div style='display: flex; align-items: center;'>
+                    <span style='font-size: 1.4rem; margin-right: 0.5rem;'>{page_icons.get(page, "📄")}</span>
+                    <div>
+                        <div style='font-size: 0.75rem; color: var(--material-primary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;'>
+                            Current Page
+                        </div>
+                        <div style='font-size: 1.1rem; color: #FFFFFF; font-weight: 600; margin-top: 0.1rem;'>
+                            {page}
+                        </div>
+                    </div>
+                </div>
+                <div style='
+                    background: var(--material-primary);
+                    color: var(--material-on-primary);
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 8px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                '>
+                    {user_info['role']}
+                </div>
             </div>
         """, unsafe_allow_html=True)
         
