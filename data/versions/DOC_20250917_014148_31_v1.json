@@ -1,0 +1,57 @@
+{
+  "id": "DOC_20250917_014148_31",
+  "filename": "1729851290.jpg",
+  "file_type": "image/jpeg",
+  "upload_date": "2025-09-17T01:41:48.062963",
+  "uploaded_by": "Suresh Menon",
+  "uploader_role": "HR",
+  "document_type": "Unknown",
+  "classification_confidence": 0,
+  "summary": "• DLIWIBe.DaGeGiooo: \"Begioo\" is a word for",
+  "action_items": [],
+  "deadlines": [],
+  "risks": [],
+  "priority": "Medium",
+  "language": "unknown",
+  "text_stats": {
+    "words": 2,
+    "characters": 17,
+    "lines": 3,
+    "sentences": 1
+  },
+  "key_information": {},
+  "file_path": "/Users/ching/Desktop/KochiMetro_DocuTrack/uploads/1729851290.jpg",
+  "tags": [],
+  "status": "Active",
+  "version": 1,
+  "permissions": {
+    "view": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "edit": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "approve": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "delete": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ]
+  }
+}

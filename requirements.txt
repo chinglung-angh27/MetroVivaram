@@ -1,6 +1,7 @@
 streamlit
 streamlit-authenticator
 pytesseract
+pdf2image
 langdetect
 fuzzywuzzy
 python-levenshtein
@@ -11,3 +12,5 @@ pandas
 numpy
 Pillow
 accelerate
+opencv-python
+python-docx
