@@ -88,181 +88,234 @@ responsive_css = '''
 </style>
 '''
 
-# Inject global dark Material U theme CSS
-st.markdown(
-    """
+# Role-based color themes
+ROLE_THEMES = {
+    "Engineer": {
+        "primary": "#4CAF50",  # Green - Engineering/Technical
+        "secondary": "#81C784",
+        "accent": "#2E7D32",
+        "surface_variant": "#1B3A1D"
+    },
+    "Finance": {
+        "primary": "#FF9800",  # Orange - Finance/Money
+        "secondary": "#FFB74D", 
+        "accent": "#F57C00",
+        "surface_variant": "#2D1F0A"
+    },
+    "HR": {
+        "primary": "#E91E63",  # Pink - HR/People
+        "secondary": "#F06292",
+        "accent": "#C2185B", 
+        "surface_variant": "#2A0E18"
+    },
+    "Station Controller": {
+        "primary": "#2196F3",  # Blue - Operations/Control
+        "secondary": "#64B5F6",
+        "accent": "#1976D2",
+        "surface_variant": "#0D1B2A"
+    },
+    "Compliance Officer": {
+        "primary": "#9C27B0",  # Purple - Compliance/Authority  
+        "secondary": "#BA68C8",
+        "accent": "#7B1FA2",
+        "surface_variant": "#1F0A26"
+    }
+}
+
+def get_theme_css(user_role=None):
+    """Generate CSS with role-specific theme colors"""
+    if user_role and user_role in ROLE_THEMES:
+        theme = ROLE_THEMES[user_role]
+        primary = theme["primary"]
+        secondary = theme["secondary"] 
+        accent = theme["accent"]
+        surface_variant = theme["surface_variant"]
+    else:
+        # Default theme (purple)
+        primary = "#BB86FC"
+        secondary = "#03DAC6"
+        accent = "#6200EE"
+        surface_variant = "#292B32"
+    
+    return f"""
     <style>
-    :root {
-        --material-primary: #BB86FC;
+    :root {{
+        --material-primary: {primary};
         --material-on-primary: #1C1B1F;
-        --material-secondary: #03DAC6;
+        --material-secondary: {secondary};
+        --material-accent: {accent};
         --material-background: #181A20;
         --material-surface: #23242B;
-        --material-surface-variant: #292B32;
+        --material-surface-variant: {surface_variant};
         --material-outline: #79747E;
         --material-error: #CF6679;
         --material-radius: 20px;
         --material-elevation: 0 2px 8px 0 rgba(187,134,252,0.10);
         --material-font: 'Google Sans', 'Roboto', 'Arial', sans-serif;
-    }
-    html, body, [data-testid="stAppViewContainer"] {
+    }}
+    html, body, [data-testid="stAppViewContainer"] {{
         background: var(--material-background) !important;
         font-family: var(--material-font) !important;
         color: #FFFFFF !important;
         font-size: 1.1rem;
         line-height: 1.7;
-    }
-    .stApp {
+    }}
+    .stApp {{
         background: var(--material-background) !important;
         padding: 0.5rem 0.5rem 2.5rem 0.5rem !important;
         color: #FFFFFF !important;
-    }
+    }}
     /* Improve text visibility */
-    .stMarkdown, .stText, p, span, div {
+    .stMarkdown, .stText, p, span, div {{
         color: #FFFFFF !important;
-    }
-    .stDataFrame {
+    }}
+    .stDataFrame {{
         background: var(--material-surface) !important;
         border-radius: var(--material-radius) !important;
-    }
-    .stDataFrame table {
+    }}
+    .stDataFrame table {{
         background: var(--material-surface) !important;
         color: #FFFFFF !important;
-    }
-    .stDataFrame th {
+    }}
+    .stDataFrame th {{
         background: var(--material-surface-variant) !important;
         color: var(--material-primary) !important;
         font-weight: 600 !important;
-    }
-    .stDataFrame td {
+    }}
+    .stDataFrame td {{
         background: var(--material-surface) !important;
         color: #FFFFFF !important;
         border-color: var(--material-outline) !important;
-    }
+    }}
     /* Card, Inputs, Headings, Responsive, etc. */
-    .stCard[style*='color:#B3261E'] { background: var(--material-surface) !important; color: #FFFFFF !important; }
-    .stCard[style*='color:#006B57'] { background: var(--material-surface) !important; color: #FFFFFF !important; }
-    .stCard {
+    .stCard[style*='color:#B3261E'] {{ background: var(--material-surface) !important; color: #FFFFFF !important; }}
+    .stCard[style*='color:#006B57'] {{ background: var(--material-surface) !important; color: #FFFFFF !important; }}
+    .stCard {{
         background: var(--material-surface) !important;
         border-radius: var(--material-radius) !important;
         padding: 1.5rem !important;
         box-shadow: var(--material-elevation) !important;
         border: 1px solid var(--material-outline) !important;
         color: #FFFFFF !important;
-    }
-    input, textarea, select {
-        border-radius: 12px !important;
-        border: 1.5px solid var(--material-outline) !important;
-        background: var(--material-surface-variant) !important;
-        font-size: 1rem;
-        padding: 0.7rem 1rem !important;
-        margin-bottom: 1rem;
-        color: #FFFFFF !important;
-        outline: 2px solid transparent;
-    }
-    input:focus, textarea:focus, select:focus {
-        text-shadow: none !important;
-        outline: 2px solid var(--material-primary);
-        outline-offset: 2px;
+    }}
+    .stTextInput > label, .stSelectbox > label, .stTextArea > label {{
+        color: var(--material-primary) !important;
+        font-weight: 600 !important;
+    }}
+    .stTextInput > div > input, .stSelectbox > div > div, .stTextArea > div > textarea {{
         background: var(--material-surface) !important;
         color: #FFFFFF !important;
-    }
-    /* Improve button visibility */
-    .stButton > button {
+        border: 1px solid var(--material-outline) !important;
+        border-radius: 12px !important;
+    }}
+    .stTextInput > div > input:focus, .stSelectbox > div > div:focus, .stTextArea > div > textarea:focus {{
+        border-color: var(--material-primary) !important;
+        box-shadow: 0 0 0 1px var(--material-primary) !important;
+    }}
+    .stButton > button {{
         background: var(--material-primary) !important;
         color: var(--material-on-primary) !important;
         border: none !important;
         border-radius: 12px !important;
-        padding: 0.7rem 1.5rem !important;
         font-weight: 600 !important;
-        box-shadow: var(--material-elevation) !important;
-    }
-    .stButton > button:hover {
+        padding: 0.6rem 1.5rem !important;
+        text-shadow: none !important;
+    }}
+    .stButton > button:hover {{
+        background: var(--material-accent) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    }}
+    .stButton > button:focus {{
+        background: var(--material-primary) !important;
+    }}
+    .stDownloadButton > button {{
         background: #A374E8 !important;
-        box-shadow: 0 4px 12px 0 rgba(187,134,252,0.25) !important;
-    }
-    h1, h2, h3, h4, h5, h6 {
+        color: #FFFFFF !important;
+    }}
+    .stSidebar {{
+        background: var(--material-surface) !important;
         font-family: var(--material-font) !important;
-        font-weight: 700;
-        color: var(--material-primary);
-        letter-spacing: -0.5px;
-    }
-    /* Improve sidebar styling */
-    .css-1d391kg, .css-1lcbmhc {
-        background: var(--material-surface) !important;
-        border-right: 1px solid var(--material-outline) !important;
-    }
-    .css-1d391kg .stRadio > label, .css-1lcbmhc .stRadio > label {
+    }}
+    .stSidebar .stRadio > label {{
         color: #FFFFFF !important;
-        font-weight: 500 !important;
-    }
-    .css-1d391kg .stRadio > label:hover, .css-1lcbmhc .stRadio > label:hover {
+    }}
+    .stSelectbox > div {{
+        background: var(--material-surface) !important;
+    }}
+    .stSelectbox option {{
+        background: var(--material-surface) !important;
+        color: #FFFFFF !important;
+    }}
+    .stNumberInput > div > input {{
         background: var(--material-surface-variant) !important;
-        border-radius: 8px !important;
-    }
-    /* Improve metrics and info styling */
-    .stMetric {
-        background: var(--material-surface) !important;
-        border-radius: var(--material-radius) !important;
-        padding: 1rem !important;
-        border: 1px solid var(--material-outline) !important;
-    }
-    .stMetric > div {
         color: #FFFFFF !important;
-    }
-    .stAlert {
+    }}
+    .stDateInput > div > input {{
         background: var(--material-surface) !important;
-        border: 1px solid var(--material-outline) !important;
+        color: #FFFFFF !important;
+    }}
+    .stFileUploader {{
+        background: var(--material-surface-variant) !important;
         border-radius: var(--material-radius) !important;
         color: #FFFFFF !important;
-    }
-    .stInfo {
+    }}
+    .stProgress > div > div {{
+        background: var(--material-surface-variant) !important;
+    }}
+    .stProgress > div > div > div {{
+        background: var(--material-primary) !important;
+    }}
+    .stInfo {{
         background: var(--material-surface-variant) !important;
         border-left: 4px solid var(--material-secondary) !important;
         color: #FFFFFF !important;
-    }
-    .stSuccess {
+    }}
+    .stSuccess {{
         background: var(--material-surface-variant) !important;
         border-left: 4px solid #4CAF50 !important;
         color: #FFFFFF !important;
-    }
-    .stError {
+    }}
+    .stError {{
         background: var(--material-surface-variant) !important;
         border-left: 4px solid var(--material-error) !important;
         color: #FFFFFF !important;
-    }
-    @media (max-width: 900px) {
-        section[data-testid="stSidebar"] {
+    }}
+    @media (max-width: 900px) {{
+        section[data-testid="stSidebar"] {{
             margin: 0.5rem 0.2rem;
             padding: 1rem 0.5rem;
             min-width: 120px;
             max-width: 100vw;
-        }
-        .stApp {
+        }}
+        .stApp {{
             padding: 0.2rem 0.2rem 2.5rem 0.2rem !important;
-        }
-        .stCard {
+        }}
+        .stCard {{
             padding: 0.7rem !important;
-        }
-    }
-    @media (max-width: 600px) {
-        .stApp {
+        }}
+    }}
+    @media (max-width: 600px) {{
+        .stApp {{
             padding: 0.1rem 0.1rem 2.5rem 0.1rem !important;
-        }
-        h1, h2, h3 {
+        }}
+        h1, h2, h3 {{
             font-size: 1.2rem !important;
-        }
-        .stCard {
+        }}
+        .stCard {{
             font-size: 0.98rem !important;
-        }
-        section[data-testid="stSidebar"] {
+        }}
+        section[data-testid="stSidebar"] {{
             padding: 0.5rem 0.2rem;
-        }
-    }
+        }}
+    }}
     </style>
-    """,
-    unsafe_allow_html=True,
-)
+    """
+
+# Inject the theme CSS into the app
+def apply_theme(user_role=None):
+    """Apply the theme CSS based on user role"""
+    st.markdown(get_theme_css(user_role), unsafe_allow_html=True)
 
 # --- Audit Log Page (Material U style) ---
 def show_audit_page(user_info=None):
@@ -413,6 +466,9 @@ def main():
         
         # Material U Login Page
         if not auth_manager.is_authenticated():
+            # Apply default theme for login page
+            apply_theme()
+            
             st.markdown(login_card_css, unsafe_allow_html=True)
             st.markdown(login_card_js, unsafe_allow_html=True)
             
@@ -426,6 +482,9 @@ def main():
         # Get current user
         user_info = auth_manager.get_current_user()
         
+        # Apply role-specific theme
+        apply_theme(user_info['role'])
+        
         # Responsive CSS for mobile-friendliness
         st.markdown(responsive_css, unsafe_allow_html=True)
         
@@ -433,7 +492,7 @@ def main():
         with st.sidebar:
             st.markdown(f"""
                 <div style='padding:0.5em 0 1.5em 0;'>
-                    <span style='font-size:1.3rem;font-weight:600;color:#BB86FC;'>{user_info['name']}</span><br>
+                    <span style='font-size:1.3rem;font-weight:600;color:var(--material-primary);'>{user_info['name']}</span><br>
                     <span style='font-size:0.95rem;color:#FFFFFF;'>{user_info['role']}</span>
                 </div>
             """, unsafe_allow_html=True)
