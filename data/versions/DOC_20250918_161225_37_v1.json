@@ -1,0 +1,57 @@
+{
+  "id": "DOC_20250918_161225_37",
+  "filename": "PSG_Queries___clarifications_08__05_14_1.pdf",
+  "file_type": "application/pdf",
+  "upload_date": "2025-09-18T16:12:25.723300",
+  "uploaded_by": "Rajesh Kumar",
+  "uploader_role": "Engineer",
+  "document_type": "Engineering Drawing",
+  "classification_confidence": 895,
+  "summary": "• KMRL/PSG/[REDACTED AMOUNT]/[REDLINE]ADDENDUM: Part of\n• Train drawings  will be provided to the contractor during D/D stage . Station drawings will be issued to the\n• The PSC shall primarily act as an interface with  the other system components and to marshall signals and to\n• The Software Safety Integrity Level (SIL) shall be based on the Risk Assessment in accordance with EN[REDACTED\n• The Tender should be accompanied by a nonrefundable Processing fee of Rs. 20,000\n• A firm, who has downloaded the tender document in  their name, can submit the tender either as individual firm\n• The Method Statement will address the  requirements of the Contract including completion within the Time for completion stated in the Part",
+  "action_items": [],
+  "deadlines": [],
+  "risks": [],
+  "priority": "Medium",
+  "language": "unknown",
+  "text_stats": {
+    "words": 5739,
+    "characters": 37776,
+    "lines": 795,
+    "sentences": 471
+  },
+  "key_information": {},
+  "file_path": "/Users/ching/Desktop/KochiMetro_DocuTrack/uploads/PSG_Queries___clarifications_08__05_14_1.pdf",
+  "tags": [],
+  "status": "Active",
+  "version": 1,
+  "permissions": {
+    "view": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "edit": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "approve": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "delete": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ]
+  }
+}

@@ -10,6 +10,10 @@ from modules import database
 from pages import dashboard, upload
 import plotly.express as px
 
+# Initialize Socket.IO server for real-time alerts
+from modules.socketio_server import start_socketio_server, get_socketio_server
+import threading
+
 # App branding
 # LOGO_PATH = "uploads/logo.png"  # Add your logo path here if needed
 APP_NAME = "MetroVivaram"
@@ -353,6 +357,189 @@ def get_theme_css(user_role=None):
 def apply_theme(user_role=None):
     """Apply the theme CSS based on user role"""
     st.markdown(get_theme_css(user_role), unsafe_allow_html=True)
+    
+    # Add user role to JavaScript window object for Socket.IO
+    if user_role:
+        st.markdown(f"""
+        <script>
+            window.currentUserRole = '{user_role}';
+        </script>
+        """, unsafe_allow_html=True)
+    
+    # Add Socket.IO client for real-time alerts
+    socketio_client_js = """
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+    // Initialize Socket.IO client for real-time alerts
+    (function() {
+        if (window.metroSocketIO) return; // Prevent multiple initializations
+        
+        try {
+            const socket = io('http://localhost:8502', {
+                transports: ['polling', 'websocket'],
+                autoConnect: true,
+                timeout: 5000,
+                forceNew: false,
+                reconnection: true,
+                reconnectionAttempts: 3,
+                reconnectionDelay: 1000
+            });
+            
+            window.metroSocketIO = socket;
+            
+            // Connection events
+            socket.on('connect', function() {
+                console.log('🔌 Connected to MetroVivaram real-time alerts');
+                
+                // Subscribe to all alert types
+                socket.emit('subscribe_to_alerts', {
+                    alert_types: ['document_upload', 'feedback_received', 'priority_alert', 'system_metrics'],
+                    user_role: window.currentUserRole || 'viewer'
+                });
+            });
+            
+            socket.on('connect_error', function(error) {
+                console.warn('⚠️ Socket.IO connection failed:', error.message);
+                // Don't show user-facing errors for Socket.IO issues
+            });
+            
+            socket.on('disconnect', function() {
+                console.log('🔌 Disconnected from real-time alerts');
+            });
+        
+        // Alert handlers
+        socket.on('real_time_alert', function(data) {
+            console.log('📢 Real-time alert received:', data);
+            showRealTimeAlert(data);
+        });
+        
+        socket.on('connection_established', function(data) {
+            console.log('✅ Real-time alerts active:', data.message);
+        });
+        
+        socket.on('subscription_confirmed', function(data) {
+            console.log('✅ Subscribed to alerts:', data.subscribed_to);
+        });
+        
+        // Function to show real-time alerts
+        function showRealTimeAlert(alertData) {
+            // Create notification container if it doesn't exist
+            let notificationContainer = document.getElementById('realtime-notifications');
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.id = 'realtime-notifications';
+                notificationContainer.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    max-width: 400px;
+                    pointer-events: none;
+                `;
+                document.body.appendChild(notificationContainer);
+            }
+            
+            // Create alert element
+            const alertElement = document.createElement('div');
+            alertElement.style.cssText = `
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 16px;
+                margin-bottom: 12px;
+                border-radius: 12px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+                animation: slideInRight 0.3s ease-out;
+                pointer-events: auto;
+                cursor: pointer;
+                border-left: 4px solid #fff;
+                position: relative;
+                overflow: hidden;
+            `;
+            
+            // Alert content
+            const alertType = alertData.type || 'system';
+            const alertIcon = getAlertIcon(alertType);
+            const alertMessage = alertData.data?.message || 'New alert received';
+            
+            alertElement.innerHTML = `
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="font-size: 24px; flex-shrink: 0;">${alertIcon}</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">${getAlertTitle(alertType)}</div>
+                        <div style="font-size: 14px; opacity: 0.9; line-height: 1.4;">${alertMessage}</div>
+                        <div style="font-size: 12px; opacity: 0.7; margin-top: 6px;">
+                            ${new Date(alertData.timestamp).toLocaleTimeString()}
+                        </div>
+                    </div>
+                    <div style="cursor: pointer; opacity: 0.7; font-size: 18px;" onclick="this.parentElement.parentElement.remove()">×</div>
+                </div>
+            `;
+            
+            // Auto-remove after 8 seconds
+            setTimeout(() => {
+                if (alertElement.parentNode) {
+                    alertElement.style.animation = 'slideOutRight 0.3s ease-in';
+                    setTimeout(() => alertElement.remove(), 300);
+                }
+            }, 8000);
+            
+            // Click to dismiss
+            alertElement.onclick = function() {
+                this.style.animation = 'slideOutRight 0.3s ease-in';
+                setTimeout(() => this.remove(), 300);
+            };
+            
+            notificationContainer.appendChild(alertElement);
+        }
+        
+        function getAlertIcon(type) {
+            const icons = {
+                'document_upload': '📄',
+                'feedback_received': '💬',
+                'priority_alert': '⚠️',
+                'system_metrics': '📊',
+                'user_activity': '👤',
+                'document_expiry': '⏰'
+            };
+            return icons[type] || '🔔';
+        }
+        
+        function getAlertTitle(type) {
+            const titles = {
+                'document_upload': 'New Document',
+                'feedback_received': 'New Feedback',
+                'priority_alert': 'Priority Alert',
+                'system_metrics': 'System Update',
+                'user_activity': 'User Activity',
+                'document_expiry': 'Document Expiry'
+            };
+            return titles[type] || 'System Alert';
+        }
+        
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(400px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(400px); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        } catch (error) {
+            console.warn('⚠️ Socket.IO initialization failed:', error);
+            // Continue without real-time alerts if Socket.IO fails
+        }
+        
+    })();
+    </script>
+    """
+    
+    st.markdown(socketio_client_js, unsafe_allow_html=True)
 
 # --- Audit Log Page (Material U style) ---
 def show_audit_page(user_info=None):
@@ -490,6 +677,31 @@ def show_demo_access_screen():
 
 def main():
     try:
+        # Initialize Socket.IO server for real-time alerts (optional)
+        if 'socketio_server_started' not in st.session_state:
+            st.session_state.socketio_server_started = False
+            
+        if not st.session_state.socketio_server_started:
+            try:
+                # Try to start Socket.IO server in background
+                import threading
+                def init_socketio():
+                    try:
+                        start_socketio_server(port=8502)
+                        st.session_state.socketio_server_started = True
+                        print("✅ Socket.IO server initialized for real-time alerts")
+                    except Exception as e:
+                        print(f"⚠️ Socket.IO server initialization failed (continuing without real-time alerts): {e}")
+                
+                # Start in background thread to not block main app
+                socketio_thread = threading.Thread(target=init_socketio, daemon=True)
+                socketio_thread.start()
+                st.session_state.socketio_server_started = True  # Mark as attempted
+                
+            except Exception as e:
+                print(f"⚠️ Socket.IO server initialization failed (continuing without real-time alerts): {e}")
+                st.session_state.socketio_server_started = True  # Mark as attempted
+        
         # Demo access control - uncomment to enable
         if 'demo_access_granted' not in st.session_state:
             st.session_state.demo_access_granted = False

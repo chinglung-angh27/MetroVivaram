@@ -103,7 +103,7 @@ class DocumentDatabase:
         self.save_data(documents)
         action = "UPLOAD" if version_number == 1 else "NEW_VERSION"
         self.log_activity(action, doc_id, user_info, f"{action} document: {document_data['filename']} (v{version_number})")
-        return doc_id
+        return document_record  # Return the full document record instead of just the ID
 
     def save_version(self, doc_id, version_number, document_record):
         """Save a version of a document to a separate file"""
@@ -276,3 +276,172 @@ class DocumentDatabase:
             "documents_by_priority": priority_counts,
             "recent_uploads": recent_count
         }
+    
+    def add_feedback(self, document_id: str, feedback_type: str, feedback_content: str = "", user_info: dict = None, 
+                     user_name: str = None, user_role: str = None, text_feedback: str = None):
+        """
+        Add feedback for a document's summary
+        
+        Args:
+            document_id: Unique identifier of the document
+            feedback_type: 'like', 'dislike', or 'text'
+            feedback_content: Text content for text feedback (optional for like/dislike)
+            user_info: User information for audit trail
+            user_name: Alternative way to pass user name
+            user_role: Alternative way to pass user role  
+            text_feedback: Alternative way to pass text content
+        """
+        try:
+            # Handle alternative parameter formats
+            if user_name and user_role and not user_info:
+                user_info = {"name": user_name, "role": user_role}
+            
+            if text_feedback and not feedback_content:
+                feedback_content = text_feedback
+            documents = self.load_data()
+            
+            # Find the document
+            document_found = False
+            for doc in documents:
+                if doc.get("id") == document_id:
+                    document_found = True
+                    
+                    # Initialize feedback array if it doesn't exist
+                    if "feedback" not in doc:
+                        doc["feedback"] = []
+                    
+                    # Create feedback entry
+                    feedback_entry = {
+                        "id": f"feedback_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{len(doc['feedback']) + 1}",
+                        "type": feedback_type,
+                        "content": feedback_content,
+                        "text": feedback_content,  # For compatibility with analytics
+                        "text_feedback": feedback_content,  # For compatibility with dashboard display
+                        "timestamp": datetime.now().isoformat(),
+                        "user": user_info.get("name", "Anonymous") if user_info else "Anonymous",
+                        "user_name": user_info.get("name", "Anonymous") if user_info else "Anonymous"  # For compatibility
+                    }
+                    
+                    doc["feedback"].append(feedback_entry)
+                    break
+            
+            if not document_found:
+                return {"success": False, "error": f"Document with ID {document_id} not found"}
+            
+            # Save updated documents
+            self.save_data(documents)
+            
+            # Log the feedback action
+            self.log_activity(
+                action="FEEDBACK_ADDED",
+                doc_id=document_id,
+                user_info=user_info,
+                details=f"Added {feedback_type} feedback for document {document_id}"
+            )
+            
+            return {"success": True, "message": "Feedback added successfully"}
+            
+        except Exception as e:
+            return {"success": False, "error": f"Error adding feedback: {str(e)}"}
+    
+    def get_document_feedback(self, document_id: str):
+        """
+        Get all feedback for a specific document
+        
+        Args:
+            document_id: Unique identifier of the document
+            
+        Returns:
+            List of feedback entries or empty list if none found
+        """
+        try:
+            documents = self.load_data()
+            
+            for doc in documents:
+                if doc.get("id") == document_id:
+                    return doc.get("feedback", [])
+            
+            return []
+            
+        except Exception as e:
+            return []
+    
+    def get_feedback_analytics(self):
+        """
+        Get analytics about feedback across all documents
+        
+        Returns:
+            Dictionary with feedback statistics
+        """
+        try:
+            documents = self.load_data()
+            
+            total_feedback = 0
+            likes = 0
+            dislikes = 0
+            text_feedback_count = 0
+            documents_with_feedback = 0
+            
+            for doc in documents:
+                if doc.get("feedback"):
+                    documents_with_feedback += 1
+                    for feedback in doc["feedback"]:
+                        total_feedback += 1
+                        feedback_type = feedback.get("type", "unknown")
+                        if feedback_type == "like":
+                            likes += 1
+                        elif feedback_type == "dislike":
+                            dislikes += 1
+                        
+                        # Count text feedback
+                        if feedback.get("text") and feedback.get("text").strip():
+                            text_feedback_count += 1
+            
+            return {
+                "total_feedback": total_feedback,
+                "likes": likes,
+                "dislikes": dislikes,
+                "text_feedback_count": text_feedback_count,
+                "documents_with_feedback": documents_with_feedback,
+                "engagement_rate": (documents_with_feedback / len(documents) * 100) if documents else 0
+            }
+            
+        except Exception as e:
+            return {
+                "total_feedback": 0,
+                "likes": 0,
+                "dislikes": 0,
+                "text_feedback_count": 0,
+                "documents_with_feedback": 0,
+                "engagement_rate": 0
+            }
+
+    def get_recent_feedback_with_text(self, limit=5):
+        """
+        Get recent feedback entries that contain text comments
+        
+        Args:
+            limit: Maximum number of feedback entries to return
+            
+        Returns:
+            List of feedback entries with text, ordered by timestamp (newest first)
+        """
+        try:
+            documents = self.load_data()
+            all_feedback = []
+            
+            for doc in documents:
+                if doc.get("feedback"):
+                    for feedback in doc["feedback"]:
+                        if feedback.get("text") and feedback.get("text").strip():
+                            feedback_entry = feedback.copy()
+                            feedback_entry["document_id"] = doc["id"]
+                            feedback_entry["feedback_type"] = feedback.get("type", "text")
+                            all_feedback.append(feedback_entry)
+            
+            # Sort by timestamp (newest first) and limit results
+            all_feedback.sort(key=lambda x: x.get("timestamp", ""), reverse=True)
+            return all_feedback[:limit]
+            
+        except Exception as e:
+            return []

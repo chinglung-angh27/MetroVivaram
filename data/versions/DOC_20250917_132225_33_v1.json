@@ -1,0 +1,57 @@
+{
+  "id": "DOC_20250917_132225_33",
+  "filename": "IMG_0723.jpg",
+  "file_type": "image/jpeg",
+  "upload_date": "2025-09-17T13:22:25.815374",
+  "uploaded_by": "Priya Nair",
+  "uploader_role": "Finance",
+  "document_type": "Unknown",
+  "classification_confidence": 0,
+  "summary": "• E. C. E. G. is the world's best known for his work in the art of art",
+  "action_items": [],
+  "deadlines": [],
+  "risks": [],
+  "priority": "Medium",
+  "language": "unknown",
+  "text_stats": {
+    "words": 1,
+    "characters": 7,
+    "lines": 2,
+    "sentences": 1
+  },
+  "key_information": {},
+  "file_path": "/Users/ching/Desktop/KochiMetro_DocuTrack/uploads/IMG_0723.jpg",
+  "tags": [],
+  "status": "Active",
+  "version": 1,
+  "permissions": {
+    "view": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "edit": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "approve": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ],
+    "delete": [
+      "Engineer",
+      "Finance",
+      "HR",
+      "Station Controller",
+      "Compliance Officer"
+    ]
+  }
+}
