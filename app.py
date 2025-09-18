@@ -10,9 +10,14 @@ from modules import database
 from pages import dashboard, upload
 import plotly.express as px
 
-# Initialize Socket.IO server for real-time alerts
-from modules.socketio_server import start_socketio_server, get_socketio_server
-import threading
+# Initialize Socket.IO server for real-time alerts (optional)
+try:
+    from modules.socketio_server import start_socketio_server, get_socketio_server
+    import threading
+    SOCKETIO_AVAILABLE = True
+except ImportError:
+    print("⚠️ Socket.IO not available - running without real-time alerts")
+    SOCKETIO_AVAILABLE = False
 
 # App branding
 # LOGO_PATH = "uploads/logo.png"  # Add your logo path here if needed
@@ -683,20 +688,24 @@ def main():
             
         if not st.session_state.socketio_server_started:
             try:
-                # Try to start Socket.IO server in background
-                import threading
-                def init_socketio():
-                    try:
-                        start_socketio_server(port=8502)
-                        st.session_state.socketio_server_started = True
-                        print("✅ Socket.IO server initialized for real-time alerts")
-                    except Exception as e:
-                        print(f"⚠️ Socket.IO server initialization failed (continuing without real-time alerts): {e}")
-                
-                # Start in background thread to not block main app
-                socketio_thread = threading.Thread(target=init_socketio, daemon=True)
-                socketio_thread.start()
-                st.session_state.socketio_server_started = True  # Mark as attempted
+                # Only try to start Socket.IO if it's available
+                if SOCKETIO_AVAILABLE:
+                    import threading
+                    def init_socketio():
+                        try:
+                            start_socketio_server(port=8502)
+                            st.session_state.socketio_server_started = True
+                            print("✅ Socket.IO server initialized for real-time alerts")
+                        except Exception as e:
+                            print(f"⚠️ Socket.IO server initialization failed (continuing without real-time alerts): {e}")
+                    
+                    # Start in background thread to not block main app
+                    socketio_thread = threading.Thread(target=init_socketio, daemon=True)
+                    socketio_thread.start()
+                    st.session_state.socketio_server_started = True  # Mark as attempted
+                else:
+                    print("ℹ️ Socket.IO not available - running without real-time alerts")
+                    st.session_state.socketio_server_started = True  # Mark as skipped
                 
             except Exception as e:
                 print(f"⚠️ Socket.IO server initialization failed (continuing without real-time alerts): {e}")

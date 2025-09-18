@@ -8,8 +8,15 @@ from modules.ocr_processor import AdvancedOCRProcessor
 from modules.document_classifier import DocumentClassifier
 from modules.summarizer import DocumentSummarizer
 from modules.database import DocumentDatabase
-from modules.alert_manager import send_document_upload_alert, send_feedback_alert
 from config import UPLOAD_DIR, MAX_FILE_SIZE
+
+# Optional real-time alerts
+try:
+    from modules.alert_manager import send_document_upload_alert, send_feedback_alert
+    ALERTS_AVAILABLE = True
+except ImportError:
+    print("⚠️ Alert manager not available - running without real-time alerts")
+    ALERTS_AVAILABLE = False
 
 
 def show_upload_page(user_info):
@@ -345,7 +352,7 @@ def show_upload_page(user_info):
                 saved_document = db.add_document(document_data, user_info)
                 
                 # Send real-time alert for document upload (optional, non-blocking)
-                if saved_document:
+                if saved_document and ALERTS_AVAILABLE:
                     try:
                         send_document_upload_alert(saved_document, user_info)
                         print(f"📢 Real-time alert sent for document upload: {saved_document.get('filename')}")
@@ -374,20 +381,21 @@ def show_upload_page(user_info):
                             st.info(f"✅ Feedback saved for document: {feedback_data['type']}")
                             
                             # Send real-time alert for feedback (optional, non-blocking)
-                            try:
-                                send_feedback_alert(
-                                    document_id, 
-                                    {
-                                        "type": feedback_data["type"],
-                                        "user_name": user_info.get('name', 'Unknown'),
-                                        "text": feedback_data.get("content", "")
-                                    },
-                                    saved_document.get('filename', 'Unknown Document')
-                                )
-                                print(f"📢 Real-time feedback alert sent for document: {saved_document.get('filename')}")
-                            except Exception as e:
-                                print(f"⚠️ Failed to send feedback alert (continuing): {e}")
-                                # Continue without alerts - don't fail the feedback submission
+                            if ALERTS_AVAILABLE:
+                                try:
+                                    send_feedback_alert(
+                                        document_id, 
+                                        {
+                                            "type": feedback_data["type"],
+                                            "user_name": user_info.get('name', 'Unknown'),
+                                            "text": feedback_data.get("content", "")
+                                        },
+                                        saved_document.get('filename', 'Unknown Document')
+                                    )
+                                    print(f"📢 Real-time feedback alert sent for document: {saved_document.get('filename')}")
+                                except Exception as e:
+                                    print(f"⚠️ Failed to send feedback alert (continuing): {e}")
+                                    # Continue without alerts - don't fail the feedback submission
                         else:
                             st.warning(f"⚠️ Could not save feedback: {feedback_result['error']}")
                     

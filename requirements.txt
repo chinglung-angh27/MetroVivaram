@@ -13,3 +13,5 @@ numpy
 Pillow
 accelerate
 python-docx
+python-socketio
+eventlet

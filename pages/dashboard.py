@@ -5,9 +5,16 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from modules.database import DocumentDatabase
-from modules.alert_manager import send_feedback_alert
 from config import USER_ROLES
 from datetime import datetime, timedelta
+
+# Optional real-time alerts
+try:
+    from modules.alert_manager import send_feedback_alert
+    ALERTS_AVAILABLE = True
+except ImportError:
+    print("⚠️ Alert manager not available - running without real-time alerts")
+    ALERTS_AVAILABLE = False
 
 def show_dashboard_page(user_info):
     # Role-based welcome message
@@ -453,19 +460,20 @@ def show_dashboard_page(user_info):
                                                 st.success("✅ Thank you for your positive feedback!")
                                                 
                                                 # Send real-time alert for feedback (optional, non-blocking)
-                                                try:
-                                                    send_feedback_alert(
-                                                        selected_doc['id'], 
-                                                        {
-                                                            "type": "like",
-                                                            "user_name": user_info.get('name', 'Unknown User'),
-                                                            "text": ""
-                                                        },
-                                                        selected_doc.get('filename', 'Unknown Document')
-                                                    )
-                                                except Exception as e:
-                                                    print(f"⚠️ Failed to send feedback alert (continuing): {e}")
-                                                    # Continue without alerts - don't fail the feedback
+                                                if ALERTS_AVAILABLE:
+                                                    try:
+                                                        send_feedback_alert(
+                                                            selected_doc['id'], 
+                                                            {
+                                                                "type": "like",
+                                                                "user_name": user_info.get('name', 'Unknown User'),
+                                                                "text": ""
+                                                            },
+                                                            selected_doc.get('filename', 'Unknown Document')
+                                                        )
+                                                    except Exception as e:
+                                                        print(f"⚠️ Failed to send feedback alert (continuing): {e}")
+                                                        # Continue without alerts - don't fail the feedback
                                             else:
                                                 st.error("❌ Failed to save feedback. Please try again.")
                                         except Exception as e:
@@ -485,19 +493,20 @@ def show_dashboard_page(user_info):
                                                 st.success("✅ Thank you for your feedback! We'll work to improve our summaries.")
                                                 
                                                 # Send real-time alert for feedback (optional, non-blocking)
-                                                try:
-                                                    send_feedback_alert(
-                                                        selected_doc['id'], 
-                                                        {
-                                                            "type": "dislike",
-                                                            "user_name": user_info.get('name', 'Unknown User'),
-                                                            "text": ""
-                                                        },
-                                                        selected_doc.get('filename', 'Unknown Document')
-                                                    )
-                                                except Exception as e:
-                                                    print(f"⚠️ Failed to send feedback alert (continuing): {e}")
-                                                    # Continue without alerts - don't fail the feedback
+                                                if ALERTS_AVAILABLE:
+                                                    try:
+                                                        send_feedback_alert(
+                                                            selected_doc['id'], 
+                                                            {
+                                                                "type": "dislike",
+                                                                "user_name": user_info.get('name', 'Unknown User'),
+                                                                "text": ""
+                                                            },
+                                                            selected_doc.get('filename', 'Unknown Document')
+                                                        )
+                                                    except Exception as e:
+                                                        print(f"⚠️ Failed to send feedback alert (continuing): {e}")
+                                                        # Continue without alerts - don't fail the feedback
                                             else:
                                                 st.error("❌ Failed to save feedback. Please try again.")
                                         except Exception as e:
@@ -529,19 +538,20 @@ def show_dashboard_page(user_info):
                                                 st.success("✅ Thank you for your detailed feedback!")
                                                 
                                                 # Send real-time alert for text feedback (optional, non-blocking)
-                                                try:
-                                                    send_feedback_alert(
-                                                        selected_doc['id'], 
-                                                        {
-                                                            "type": "text",
-                                                            "user_name": user_info.get('name', 'Unknown User'),
-                                                            "text": text_feedback.strip()
-                                                        },
-                                                        selected_doc.get('filename', 'Unknown Document')
-                                                    )
-                                                except Exception as e:
-                                                    print(f"⚠️ Failed to send feedback alert (continuing): {e}")
-                                                    # Continue without alerts - don't fail the feedback
+                                                if ALERTS_AVAILABLE:
+                                                    try:
+                                                        send_feedback_alert(
+                                                            selected_doc['id'], 
+                                                            {
+                                                                "type": "text",
+                                                                "user_name": user_info.get('name', 'Unknown User'),
+                                                                "text": text_feedback.strip()
+                                                            },
+                                                            selected_doc.get('filename', 'Unknown Document')
+                                                        )
+                                                    except Exception as e:
+                                                        print(f"⚠️ Failed to send feedback alert (continuing): {e}")
+                                                        # Continue without alerts - don't fail the feedback
                                                 
                                                 # Clear the text input after successful submission
                                                 st.session_state[f"dashboard_text_feedback_{selected_doc['id']}"] = ""
